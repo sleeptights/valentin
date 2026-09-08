@@ -114,26 +114,6 @@ img {
   transform: scale(1.04);
 }
 
-@keyframes reviews-marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.reviews-track {
-  animation: reviews-marquee 90s linear infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-}
-
-.reviews-marquee:hover .reviews-track,
-.reviews-marquee:focus-within .reviews-track {
-  animation-play-state: paused;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -146,10 +126,5 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-
-  .reviews-track {
-    animation: none !important;
-    transform: none !important;
   }
 }

@@ -1,4 +1,4 @@
-export type Category = "кухни" | "прихожие" | "диваны";
+export type Category = "кухни" | "прихожие" | "диваны" | "мебель для дома";
 
 export type Material =
   | "орех"

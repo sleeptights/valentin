@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export function ProductGallery({
   name,
@@ -11,11 +11,38 @@ export function ProductGallery({
   images: string[];
 }) {
   const [active, setActive] = useState(0);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
   const src = images[active] ?? images[0];
+  const total = images.length;
+
+  const go = (dir: -1 | 1) => {
+    if (total <= 1) return;
+    setActive((i) => (i + dir + total) % total);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStart.current = {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY,
+    };
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStart.current || total <= 1) return;
+    const dx = e.changedTouches[0].clientX - touchStart.current.x;
+    const dy = e.changedTouches[0].clientY - touchStart.current.y;
+    touchStart.current = null;
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+    go(dx < 0 ? 1 : -1);
+  };
 
   return (
     <div className="space-y-3">
-      <div className="relative aspect-[3/4] overflow-hidden bg-cashmere shadow-soft">
+      <div
+        className="relative aspect-[3/4] touch-pan-y overflow-hidden bg-cashmere shadow-soft"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
         <Image
           key={src}
           src={src}
@@ -25,9 +52,22 @@ export function ProductGallery({
           className="object-cover object-center"
           sizes="(max-width:768px) 100vw, 50vw"
           quality={90}
+          draggable={false}
         />
+        {total > 1 ? (
+          <div className="pointer-events-none absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5">
+            {images.map((_, i) => (
+              <span
+                key={i}
+                className={`h-1.5 w-1.5 rounded-full ${
+                  i === active ? "bg-brass" : "bg-white/70"
+                }`}
+              />
+            ))}
+          </div>
+        ) : null}
       </div>
-      {images.length > 1 ? (
+      {total > 1 ? (
         <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
           {images.map((thumb, i) => {
             const selected = i === active;

@@ -31,7 +31,7 @@ function Card({
   rating,
 }: (typeof yandexReviews)[number]) {
   return (
-    <article className="flex h-[22.5rem] w-[min(22rem,78vw)] shrink-0 flex-col rounded-2xl border border-brass/15 bg-milk p-5 shadow-soft md:h-[24rem] md:w-[24rem] md:p-6">
+    <article className="flex h-[22.5rem] w-[min(22rem,78vw)] shrink-0 snap-center flex-col rounded-2xl border border-brass/15 bg-milk p-5 shadow-soft md:h-[24rem] md:w-[24rem] md:snap-start md:p-6">
       <Stars value={rating} />
       <p className="mt-3 flex-1 overflow-hidden font-serif text-[1.15rem] leading-snug text-graphite md:text-xl">
         «{excerpt(text)}»
@@ -45,8 +45,6 @@ function Card({
 }
 
 export function ReviewsTicker() {
-  const loop = [...yandexReviews, ...yandexReviews];
-
   return (
     <section
       id="reviews"
@@ -75,15 +73,16 @@ export function ReviewsTicker() {
         </a>
       </div>
 
-      <div className="reviews-marquee group relative">
+      <div className="relative">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-cashmere to-transparent md:w-16" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-cashmere to-transparent md:w-16" />
-        <div className="reviews-track flex w-max gap-4 py-1 pr-4 md:gap-5">
-          {loop.map((review, i) => (
-            <div
-              key={`${review.id}-${i}`}
-              aria-hidden={i >= yandexReviews.length}
-            >
+        <div
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-5 py-1 pb-3 [-ms-overflow-style:none] [scrollbar-width:none] touch-pan-x md:gap-5 md:px-8 [&::-webkit-scrollbar]:hidden"
+          role="list"
+          aria-label="Отзывы клиентов"
+        >
+          {yandexReviews.map((review) => (
+            <div key={review.id} role="listitem">
               <Card {...review} />
             </div>
           ))}

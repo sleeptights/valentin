@@ -16,7 +16,13 @@ import { productDescription, productFeatures } from "@/lib/productCopy";
 import { useCart } from "@/context/CartContext";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 
-const categories: Category[] = ["кухни", "прихожие", "диваны"];
+const categories: { id: Category; label: string }[] = [
+  { id: "кухни", label: "Кухни" },
+  { id: "прихожие", label: "Прихожие" },
+  { id: "диваны", label: "Диваны" },
+  { id: "мебель для дома", label: "Мебель для дома" },
+];
+
 
 const materials = Array.from(
   new Set(products.flatMap((p) => p.materials)),
@@ -30,7 +36,12 @@ const defaultFilters: CatalogFilters = {
 };
 
 function isCategory(value: string | null): value is Category {
-  return value === "кухни" || value === "прихожие" || value === "диваны";
+  return (
+    value === "кухни" ||
+    value === "прихожие" ||
+    value === "диваны" ||
+    value === "мебель для дома"
+  );
 }
 
 export function Catalog({ standalone = false }: { standalone?: boolean }) {
@@ -183,20 +194,20 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
         </div>
 
         <div className="mb-8 flex flex-wrap gap-2">
-          {categories.map((c) => {
+          {categories.map(({ id: c, label }) => {
             const on = filters.categories.includes(c);
             return (
               <button
                 key={c}
                 type="button"
                 onClick={() => toggleCategory(c)}
-                className={`px-4 py-2.5 text-sm capitalize transition-all duration-300 ${
+                className={`px-4 py-2.5 text-sm transition-all duration-300 ${
                   on
                     ? "bg-wood text-milk shadow-brass"
                     : "border border-brass/25 bg-milk text-graphite/70 shadow-soft hover:border-brass/50 hover:shadow-lift"
                 }`}
               >
-                {c}
+                {label}
               </button>
             );
           })}

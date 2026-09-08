@@ -110,6 +110,16 @@ export const projectGroups: ProjectGroup[] = [
           "/images/portfolio/kitchens/kitchen-08/02.jpg?v=11",
           "/images/portfolio/kitchens/kitchen-08/03.jpg?v=11"
         ]
+      },
+      {
+        "id": "kitchen-09",
+        "style": "неоклассика",
+        "layout": "с островом",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-09/01.jpg?v=12",
+          "/images/portfolio/kitchens/kitchen-09/02.jpg?v=12",
+          "/images/portfolio/kitchens/kitchen-09/03.jpg?v=12"
+        ]
       }
     ]
   },

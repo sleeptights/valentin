@@ -10,7 +10,8 @@ type Kind =
   | "pouf"
   | "mirror"
   | "shoe"
-  | "wardrobe";
+  | "wardrobe"
+  | "home";
 
 function kindOf(product: Product): Kind {
   const n = product.name.toLowerCase();
@@ -22,6 +23,7 @@ function kindOf(product: Product): Kind {
   if (n.includes("обувн") || n.includes("банкет")) return "shoe";
   if (n.includes("шкаф")) return "wardrobe";
   if (product.category === "прихожие") return "hallway";
+  if (product.category === "мебель для дома") return "home";
   return "sofa";
 }
 
@@ -47,6 +49,8 @@ export function productDescription(product: Product): string {
       return `${name} — обувница под заказ. Глубина и фасады согласуем на замере. Цена ${from}.`;
     case "wardrobe":
       return `${name} — платяной шкаф в прихожую или спальню. Наполнение полок и штанг — по вашим вещам. Цена ${from}.`;
+    case "home":
+      return `${name} — корпусная мебель для дома салона Valentin. Размеры, фасады и наполнение согласуем в салоне. Цена ${from}.`;
     default:
       return `${name} — мягкая мебель салона Valentin, обивка: ${fabric}. Изготавливаем под заказ в нужной ткани. Цена ${from}.`;
   }
@@ -65,6 +69,7 @@ export function productFeatures(product: Product): string[] {
     case "shoe":
     case "wardrobe":
     case "mirror":
+    case "home":
       return ["Корпусная мебель под размер", "Фасады и фурнитура на выбор", "Под заказ"];
     default:
       return [`Обивка: ${product.materials.join(", ")}`, "Ткань можно заменить", "Под заказ"];
@@ -72,7 +77,11 @@ export function productFeatures(product: Product): string[] {
 }
 
 export function productLeadTime(product: Product): string {
-  if (product.category === "кухни" || product.category === "прихожие") {
+  if (
+    product.category === "кухни" ||
+    product.category === "прихожие" ||
+    product.category === "мебель для дома"
+  ) {
     return "До 60 рабочих дней после утверждения проекта";
   }
   return "Срок поставки согласуем при заказе";
