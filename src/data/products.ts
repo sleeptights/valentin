@@ -798,7 +798,7 @@ export const products: Product[] = [
       "/images/catalog/5001/2.jpg?v=12"
     ],
     "description": "Прихожая Softline — прихожие салона Valentin от 189 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "kuhnya-aura-5002",
@@ -843,7 +843,7 @@ export const products: Product[] = [
       "/images/catalog/5004/2.jpg?v=12"
     ],
     "description": "Детская Nest — мебель для дома салона Valentin от 165 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-forma-5005",
@@ -858,7 +858,7 @@ export const products: Product[] = [
       "/images/catalog/5005/2.jpg?v=12"
     ],
     "description": "Прихожая Forma — прихожие салона Valentin от 142 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "gostinaya-casa-5006",
@@ -873,7 +873,7 @@ export const products: Product[] = [
       "/images/catalog/5006/2.jpg?v=12"
     ],
     "description": "Гостиная Casa — мебель для дома салона Valentin от 128 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "mebel-atelier-5007",
@@ -888,7 +888,7 @@ export const products: Product[] = [
       "/images/catalog/5007/2.jpg?v=12"
     ],
     "description": "Мебель Atelier — мебель для дома салона Valentin от 156 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-mirror-grande-5008",
@@ -903,7 +903,7 @@ export const products: Product[] = [
       "/images/catalog/5008/2.jpg?v=12"
     ],
     "description": "Прихожая Mirror Grande — прихожие салона Valentin от 175 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "stenka-domus-5009",
@@ -918,7 +918,7 @@ export const products: Product[] = [
       "/images/catalog/5009/2.jpg?v=12"
     ],
     "description": "Стенка Domus — мебель для дома салона Valentin от 198 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-vista-5010",
@@ -933,7 +933,7 @@ export const products: Product[] = [
       "/images/catalog/5010/2.jpg?v=12"
     ],
     "description": "Прихожая Vista — прихожие салона Valentin от 134 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-capitone-5011",
@@ -948,7 +948,7 @@ export const products: Product[] = [
       "/images/catalog/5011/2.jpg?v=12"
     ],
     "description": "Прихожая Capitonné — прихожие салона Valentin от 168 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "tv-zona-gallery-5012",
@@ -963,7 +963,7 @@ export const products: Product[] = [
       "/images/catalog/5012/2.jpg?v=12"
     ],
     "description": "ТВ-зона Gallery — мебель для дома салона Valentin от 215 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-valencia-5013",
@@ -978,7 +978,7 @@ export const products: Product[] = [
       "/images/catalog/5013/2.jpg?v=12"
     ],
     "description": "Прихожая Valencia Classic — прихожие салона Valentin от 145 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-nordic-oak-5014",
@@ -993,7 +993,7 @@ export const products: Product[] = [
       "/images/catalog/5014/2.jpg?v=12"
     ],
     "description": "Прихожая Nordic Oak — прихожие салона Valentin от 168 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-emerald-suite-5015",
@@ -1008,7 +1008,7 @@ export const products: Product[] = [
       "/images/catalog/5015/2.jpg?v=12"
     ],
     "description": "Прихожая Emerald Suite — прихожие салона Valentin от 189 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-victoria-5016",
@@ -1023,7 +1023,7 @@ export const products: Product[] = [
       "/images/catalog/5016/2.jpg?v=12"
     ],
     "description": "Прихожая Victoria — прихожие салона Valentin от 158 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "gostinaya-imperial-5017",
@@ -1038,7 +1038,7 @@ export const products: Product[] = [
       "/images/catalog/5017/2.jpg?v=12"
     ],
     "description": "Гостиная Imperial Wall — мебель для дома салона Valentin от 248 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "shkaf-wenge-5018",
@@ -1068,7 +1068,7 @@ export const products: Product[] = [
       "/images/catalog/5019/2.jpg?v=12"
     ],
     "description": "Прихожая Cream Tuft — прихожие салона Valentin от 98 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
     "id": "prihozhaya-champagne-5020",
@@ -1083,7 +1083,7 @@ export const products: Product[] = [
       "/images/catalog/5020/2.jpg?v=12"
     ],
     "description": "Прихожая Champagne Elite — прихожие салона Valentin от 185 000 ₽.",
-    "features": ["Корпусная мебель под размер", "Под заказ"]
+    "features": ["По индивидуальным размерам", "Под заказ"]
   }
 ];
 
