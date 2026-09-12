@@ -18,11 +18,6 @@ const cartExtras = [
     title: "Сборка",
     price: "10% от стоимости заказа",
   },
-  {
-    id: "floor-carry",
-    title: "Занос на этаж",
-    price: "1500 рублей",
-  },
 ] as const;
 
 export function SideCart() {
