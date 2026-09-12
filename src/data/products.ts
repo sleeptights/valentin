@@ -1084,6 +1084,216 @@ export const products: Product[] = [
     ],
     "description": "Прихожая Champagne Elite — прихожие салона Valentin от 185 000 ₽.",
     "features": ["По индивидуальным размерам", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-oliviya-5021",
+    "name": "Кухня Оливия",
+    "priceFrom": 268000,
+    "materials": ["дуб", "латунь"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5021/0.jpg?v=13",
+      "/images/catalog/5021/1.jpg?v=13",
+      "/images/catalog/5021/2.jpg?v=13"
+    ],
+    "description": "Кухня Оливия — кухни салона Valentin от 268 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-milana-5022",
+    "name": "Кухня Милана",
+    "priceFrom": 198000,
+    "materials": ["кашемир", "дуб"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5022/0.jpg?v=13",
+      "/images/catalog/5022/1.jpg?v=13",
+      "/images/catalog/5022/2.jpg?v=13"
+    ],
+    "description": "Кухня Милана — кухни салона Valentin от 198 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-umbra-5023",
+    "name": "Кухня Умбра",
+    "priceFrom": 255000,
+    "materials": ["дуб", "кашемир"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5023/0.jpg?v=13",
+      "/images/catalog/5023/1.jpg?v=13",
+      "/images/catalog/5023/2.jpg?v=13"
+    ],
+    "description": "Кухня Умбра — кухни салона Valentin от 255 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-nuage-5024",
+    "name": "Кухня Nuage",
+    "priceFrom": 232000,
+    "materials": ["дуб", "кашемир"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5024/0.jpg?v=13",
+      "/images/catalog/5024/1.jpg?v=13",
+      "/images/catalog/5024/2.jpg?v=13"
+    ],
+    "description": "Кухня Nuage — кухни салона Valentin от 232 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-avrora-5025",
+    "name": "Кухня Аврора",
+    "priceFrom": 278000,
+    "materials": ["мрамор", "латунь"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5025/0.jpg?v=13",
+      "/images/catalog/5025/1.jpg?v=13",
+      "/images/catalog/5025/2.jpg?v=13"
+    ],
+    "description": "Кухня Аврора — кухни салона Valentin от 278 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-amber-5026",
+    "name": "Кухня Амбер",
+    "priceFrom": 215000,
+    "materials": ["дуб", "латунь"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5026/0.jpg?v=13",
+      "/images/catalog/5026/1.jpg?v=13",
+      "/images/catalog/5026/2.jpg?v=13"
+    ],
+    "description": "Кухня Амбер — кухни салона Valentin от 215 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-oliva-5027",
+    "name": "Кухня Олива",
+    "priceFrom": 248000,
+    "materials": ["дуб", "латунь"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5027/0.jpg?v=13",
+      "/images/catalog/5027/1.jpg?v=13",
+      "/images/catalog/5027/2.jpg?v=13"
+    ],
+    "description": "Кухня Олива — кухни салона Valentin от 248 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-shampan-5028",
+    "name": "Кухня Шампань",
+    "priceFrom": 285000,
+    "materials": ["мрамор", "латунь"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5028/0.jpg?v=13",
+      "/images/catalog/5028/1.jpg?v=13",
+      "/images/catalog/5028/2.jpg?v=13"
+    ],
+    "description": "Кухня Шампань — кухни салона Valentin от 285 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-laguna-5029",
+    "name": "Кухня Лагуна",
+    "priceFrom": 262000,
+    "materials": ["дуб", "мрамор"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5029/0.jpg?v=13",
+      "/images/catalog/5029/1.jpg?v=13",
+      "/images/catalog/5029/2.jpg?v=13"
+    ],
+    "description": "Кухня Лагуна — кухни салона Valentin от 262 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-etual-5030",
+    "name": "Кухня Этуаль",
+    "priceFrom": 205000,
+    "materials": ["дуб", "кашемир"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5030/0.jpg?v=13",
+      "/images/catalog/5030/1.jpg?v=13",
+      "/images/catalog/5030/2.jpg?v=13"
+    ],
+    "description": "Кухня Этуаль — кухни салона Valentin от 205 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-versal-5031",
+    "name": "Кухня Версаль",
+    "priceFrom": 295000,
+    "materials": ["кашемир", "мрамор"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5031/0.jpg?v=13",
+      "/images/catalog/5031/1.jpg?v=13",
+      "/images/catalog/5031/2.jpg?v=13"
+    ],
+    "description": "Кухня Версаль — кухни салона Valentin от 295 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-kontrast-5032",
+    "name": "Кухня Контраст",
+    "priceFrom": 238000,
+    "materials": ["дуб", "кашемир"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5032/0.jpg?v=13",
+      "/images/catalog/5032/1.jpg?v=13",
+      "/images/catalog/5032/2.jpg?v=13"
+    ],
+    "description": "Кухня Контраст — кухни салона Valentin от 238 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-provans-5033",
+    "name": "Кухня Прованс",
+    "priceFrom": 188000,
+    "materials": ["кашемир", "дуб"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5033/0.jpg?v=13",
+      "/images/catalog/5033/1.jpg?v=13",
+      "/images/catalog/5033/2.jpg?v=13"
+    ],
+    "description": "Кухня Прованс — кухни салона Valentin от 188 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "kuhnya-belveder-5034",
+    "name": "Кухня Бельведер",
+    "priceFrom": 272000,
+    "materials": ["латунь", "кашемир"],
+    "inStock": false,
+    "category": "кухни",
+    "images": [
+      "/images/catalog/5034/0.jpg?v=13",
+      "/images/catalog/5034/1.jpg?v=13",
+      "/images/catalog/5034/2.jpg?v=13"
+    ],
+    "description": "Кухня Бельведер — кухни салона Valentin от 272 000 ₽.",
+    "features": ["Индивидуальные размеры", "Под заказ"]
   }
 ];
 
