@@ -1,1348 +1,1348 @@
-import type { KitchenCollection, Product } from "@/types";
+﻿import type { KitchenCollection, Product } from "@/types";
 
 export { vipDeliveryThreshold as FREE_SHIPPING_THRESHOLD } from "@/lib/utils";
 
 const img = (name: string) => `/images/real/${name}`;
 
-/** Товары салона Valentin с mebelgorod.com/shops/valentin (shop_id=10) */
+/** РўРѕРІР°СЂС‹ СЃР°Р»РѕРЅР° Valentin СЃ mebelgorod.com/shops/valentin (shop_id=10) */
 export const products: Product[] = [
   {
     "id": "divan-nord-2131",
-    "name": "Диван Норд",
+    "name": "Р”РёРІР°РЅ РќРѕСЂРґ",
     "priceFrom": 25800,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2131/0.jpg?v=13",
-      "/images/catalog/2131/1.jpg?v=13",
-      "/images/catalog/2131/2.jpg?v=13"
+      "/images/catalog/2131/0.jpg?v=15",
+      "/images/catalog/2131/1.jpg?v=15",
+      "/images/catalog/2131/2.jpg?v=15"
     ],
-    "description": "Диван Норд — прямые диваны салона Valentin от 25 800 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ РќРѕСЂРґ вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 25В 800 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-bar-2137",
-    "name": "Диван Бар",
+    "name": "Р”РёРІР°РЅ Р‘Р°СЂ",
     "priceFrom": 31900,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2137/0.jpg?v=13",
-      "/images/catalog/2137/1.jpg?v=13",
-      "/images/catalog/2137/2.jpg?v=13"
+      "/images/catalog/2137/0.jpg?v=15",
+      "/images/catalog/2137/1.jpg?v=15",
+      "/images/catalog/2137/2.jpg?v=15"
     ],
-    "description": "Диван Бар — прямые диваны салона Valentin от 31 900 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ Р‘Р°СЂ вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 31В 900 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "kuhnya-miya-3852",
-    "name": "Кухня Мия",
+    "name": "РљСѓС…РЅСЏ РњРёСЏ",
     "priceFrom": 120000,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/3852/0.jpg?v=13",
-      "/images/catalog/3852/1.jpg?v=13",
-      "/images/catalog/3852/2.jpg?v=13"
+      "/images/catalog/3852/0.jpg?v=15",
+      "/images/catalog/3852/1.jpg?v=15",
+      "/images/catalog/3852/2.jpg?v=15"
     ],
-    "description": "Кухня Мия — кухонные гарнитуры салона Valentin от 120 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСѓС…РЅСЏ РњРёСЏ вЂ” РєСѓС…РѕРЅРЅС‹Рµ РіР°СЂРЅРёС‚СѓСЂС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 120В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Индивидуальные размеры"
+      "РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹"
     ]
   },
   {
     "id": "divan-edelveys-2141",
-    "name": "Диван Эдельвейс",
+    "name": "Р”РёРІР°РЅ Р­РґРµР»СЊРІРµР№СЃ",
     "priceFrom": 37300,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2141/0.jpg?v=13",
-      "/images/catalog/2141/1.jpg?v=13",
-      "/images/catalog/2141/2.jpg?v=13"
+      "/images/catalog/2141/0.jpg?v=15",
+      "/images/catalog/2141/1.jpg?v=15",
+      "/images/catalog/2141/2.jpg?v=15"
     ],
-    "description": "Диван Эдельвейс — прямые диваны салона Valentin от 37 300 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ Р­РґРµР»СЊРІРµР№СЃ вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 37В 300 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-yunost-2124",
-    "name": "Диван Юность",
+    "name": "Р”РёРІР°РЅ Р®РЅРѕСЃС‚СЊ",
     "priceFrom": 18000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2124/0.jpg?v=13",
-      "/images/catalog/2124/1.jpg?v=13",
-      "/images/catalog/2124/2.jpg?v=13"
+      "/images/catalog/2124/0.jpg?v=15",
+      "/images/catalog/2124/1.jpg?v=15",
+      "/images/catalog/2124/2.jpg?v=15"
     ],
-    "description": "Диван Юность — диваны и кресла салона Valentin от 18 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ Р®РЅРѕСЃС‚СЊ вЂ” РґРёРІР°РЅС‹ Рё РєСЂРµСЃР»Р° СЃР°Р»РѕРЅР° Valentin РѕС‚ 18В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "kreslo-sherlok-2150",
-    "name": "Кресло Шерлок",
+    "name": "РљСЂРµСЃР»Рѕ РЁРµСЂР»РѕРє",
     "priceFrom": 19200,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2150/0.jpg?v=13",
-      "/images/catalog/2150/1.jpg?v=13",
-      "/images/catalog/2150/2.jpg?v=13"
+      "/images/catalog/2150/0.jpg?v=15",
+      "/images/catalog/2150/1.jpg?v=15",
+      "/images/catalog/2150/2.jpg?v=15"
     ],
-    "description": "Кресло Шерлок — кресла салона Valentin от 19 200 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСЂРµСЃР»Рѕ РЁРµСЂР»РѕРє вЂ” РєСЂРµСЃР»Р° СЃР°Р»РѕРЅР° Valentin РѕС‚ 19В 200 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-prestizh-2-2147",
-    "name": "Диван Престиж 2",
+    "name": "Р”РёРІР°РЅ РџСЂРµСЃС‚РёР¶ 2",
     "priceFrom": 31900,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2147/0.jpg?v=13",
-      "/images/catalog/2147/1.jpg?v=13",
-      "/images/catalog/2147/2.jpg?v=13"
+      "/images/catalog/2147/0.jpg?v=15",
+      "/images/catalog/2147/1.jpg?v=15",
+      "/images/catalog/2147/2.jpg?v=15"
     ],
-    "description": "Диван Престиж 2 — прямые диваны салона Valentin от 31 900 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ РџСЂРµСЃС‚РёР¶ 2 вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 31В 900 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-evrika-malysh-2129",
-    "name": "Диван Эврика-малыш",
+    "name": "Р”РёРІР°РЅ Р­РІСЂРёРєР°-РјР°Р»С‹С€",
     "priceFrom": 16000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2129/0.jpg?v=13",
-      "/images/catalog/2129/1.jpg?v=13",
-      "/images/catalog/2129/2.jpg?v=13"
+      "/images/catalog/2129/0.jpg?v=15",
+      "/images/catalog/2129/1.jpg?v=15",
+      "/images/catalog/2129/2.jpg?v=15"
     ],
-    "description": "Диван Эврика-малыш — прямые диваны салона Valentin от 16 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ Р­РІСЂРёРєР°-РјР°Р»С‹С€ вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 16В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "prihozhaya-classic-7-2133",
-    "name": "Прихожая Classic-7",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Classic-7",
     "priceFrom": 249500,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2133/0.jpg?v=13",
-      "/images/catalog/2133/1.jpg?v=13",
-      "/images/catalog/2133/2.jpg?v=13"
+      "/images/catalog/2133/0.jpg?v=15",
+      "/images/catalog/2133/1.jpg?v=15",
+      "/images/catalog/2133/2.jpg?v=15"
     ],
-    "description": "Прихожая Classic-7 — прихожие салона Valentin от 249 500 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Classic-7 вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 249В 500 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "divan-rossa-2143",
-    "name": "Диван Росса",
+    "name": "Р”РёРІР°РЅ Р РѕСЃСЃР°",
     "priceFrom": 33300,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2143/0.jpg?v=13",
-      "/images/catalog/2143/1.jpg?v=13",
-      "/images/catalog/2143/2.jpg?v=13"
+      "/images/catalog/2143/0.jpg?v=15",
+      "/images/catalog/2143/1.jpg?v=15",
+      "/images/catalog/2143/2.jpg?v=15"
     ],
-    "description": "Диван Росса — прямые диваны салона Valentin от 33 300 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ Р РѕСЃСЃР° вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 33В 300 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-hilton-2153",
-    "name": "Диван Хилтон",
+    "name": "Р”РёРІР°РЅ РҐРёР»С‚РѕРЅ",
     "priceFrom": 15200,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2153/0.jpg?v=13",
-      "/images/catalog/2153/1.jpg?v=13",
-      "/images/catalog/2153/2.jpg?v=13"
+      "/images/catalog/2153/0.jpg?v=15",
+      "/images/catalog/2153/1.jpg?v=15",
+      "/images/catalog/2153/2.jpg?v=15"
     ],
-    "description": "Диван Хилтон — прямые диваны салона Valentin от 15 200 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ РҐРёР»С‚РѕРЅ вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 15В 200 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "stul-bar-2138",
-    "name": "Стул Бар",
+    "name": "РЎС‚СѓР» Р‘Р°СЂ",
     "priceFrom": 8000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2138/0.jpg?v=13",
-      "/images/catalog/2138/1.jpg?v=13",
-      "/images/catalog/2138/2.jpg?v=13"
+      "/images/catalog/2138/0.jpg?v=15",
+      "/images/catalog/2138/1.jpg?v=15",
+      "/images/catalog/2138/2.jpg?v=15"
     ],
-    "description": "Стул Бар — стулья салона Valentin от 8 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РЎС‚СѓР» Р‘Р°СЂ вЂ” СЃС‚СѓР»СЊСЏ СЃР°Р»РѕРЅР° Valentin РѕС‚ 8В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "kuhnya-santorini-4034",
-    "name": "Кухня Санторини",
+    "name": "РљСѓС…РЅСЏ РЎР°РЅС‚РѕСЂРёРЅРё",
     "priceFrom": 196000,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/4034/0.jpg?v=13",
-      "/images/catalog/4034/1.jpg?v=13",
-      "/images/catalog/4034/2.jpg?v=13"
+      "/images/catalog/4034/0.jpg?v=15",
+      "/images/catalog/4034/1.jpg?v=15",
+      "/images/catalog/4034/2.jpg?v=15"
     ],
-    "description": "Кухня Санторини — кухонные гарнитуры салона Valentin от 196 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСѓС…РЅСЏ РЎР°РЅС‚РѕСЂРёРЅРё вЂ” РєСѓС…РѕРЅРЅС‹Рµ РіР°СЂРЅРёС‚СѓСЂС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 196В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Индивидуальные размеры"
+      "РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹"
     ]
   },
   {
     "id": "kreslo-kokteylnoe-2132",
-    "name": "Кресло коктейльное",
+    "name": "РљСЂРµСЃР»Рѕ РєРѕРєС‚РµР№Р»СЊРЅРѕРµ",
     "priceFrom": 15900,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2132/0.jpg?v=13",
-      "/images/catalog/2132/1.jpg?v=13",
-      "/images/catalog/2132/2.jpg?v=13"
+      "/images/catalog/2132/0.jpg?v=15",
+      "/images/catalog/2132/1.jpg?v=15",
+      "/images/catalog/2132/2.jpg?v=15"
     ],
-    "description": "Кресло коктейльное — кресла салона Valentin от 15 900 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСЂРµСЃР»Рѕ РєРѕРєС‚РµР№Р»СЊРЅРѕРµ вЂ” РєСЂРµСЃР»Р° СЃР°Р»РѕРЅР° Valentin РѕС‚ 15В 900 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "obuvnitsa-classic-2154",
-    "name": "Обувница Classic",
+    "name": "РћР±СѓРІРЅРёС†Р° Classic",
     "priceFrom": 31600,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2154/0.jpg?v=13",
-      "/images/catalog/2154/1.jpg?v=13",
-      "/images/catalog/2154/2.jpg?v=13"
+      "/images/catalog/2154/0.jpg?v=15",
+      "/images/catalog/2154/1.jpg?v=15",
+      "/images/catalog/2154/2.jpg?v=15"
     ],
-    "description": "Обувница Classic — прихожие салона Valentin от 31 600 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РћР±СѓРІРЅРёС†Р° Classic вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 31В 600 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "prihozhaya-louf-2135",
-    "name": "Прихожая Лоуф",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Р›РѕСѓС„",
     "priceFrom": 59600,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2135/0.jpg?v=13",
-      "/images/catalog/2135/1.jpg?v=13",
-      "/images/catalog/2135/2.jpg?v=13"
+      "/images/catalog/2135/0.jpg?v=15",
+      "/images/catalog/2135/1.jpg?v=15",
+      "/images/catalog/2135/2.jpg?v=15"
     ],
-    "description": "Прихожая Лоуф — прихожие салона Valentin от 59 600 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Р›РѕСѓС„ вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 59В 600 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "prihozhaya-s-tumboy-i-zerkalom-2162",
-    "name": "Прихожая с тумбой и зеркалом",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ СЃ С‚СѓРјР±РѕР№ Рё Р·РµСЂРєР°Р»РѕРј",
     "priceFrom": 99600,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2162/0.jpg?v=13",
-      "/images/catalog/2162/1.jpg?v=13",
-      "/images/catalog/2162/2.jpg?v=13"
+      "/images/catalog/2162/0.jpg?v=15",
+      "/images/catalog/2162/1.jpg?v=15",
+      "/images/catalog/2162/2.jpg?v=15"
     ],
-    "description": "Прихожая с тумбой и зеркалом — прихожие салона Valentin от 99 600 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ СЃ С‚СѓРјР±РѕР№ Рё Р·РµСЂРєР°Р»РѕРј вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 99В 600 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "kreslo-edelveys-2142",
-    "name": "Кресло Эдельвейс",
+    "name": "РљСЂРµСЃР»Рѕ Р­РґРµР»СЊРІРµР№СЃ",
     "priceFrom": 23800,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2142/0.jpg?v=13",
-      "/images/catalog/2142/1.jpg?v=13",
-      "/images/catalog/2142/2.jpg?v=13"
+      "/images/catalog/2142/0.jpg?v=15",
+      "/images/catalog/2142/1.jpg?v=15",
+      "/images/catalog/2142/2.jpg?v=15"
     ],
-    "description": "Кресло Эдельвейс — кресла салона Valentin от 23 800 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСЂРµСЃР»Рѕ Р­РґРµР»СЊРІРµР№СЃ вЂ” РєСЂРµСЃР»Р° СЃР°Р»РѕРЅР° Valentin РѕС‚ 23В 800 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-sherlok-3708",
-    "name": "Диван Шерлок",
+    "name": "Р”РёРІР°РЅ РЁРµСЂР»РѕРє",
     "priceFrom": 33600,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/3708/0.jpg?v=13",
-      "/images/catalog/3708/1.jpg?v=13",
-      "/images/catalog/3708/2.jpg?v=13"
+      "/images/catalog/3708/0.jpg?v=15",
+      "/images/catalog/3708/1.jpg?v=15",
+      "/images/catalog/3708/2.jpg?v=15"
     ],
-    "description": "Диван Шерлок — прямые диваны салона Valentin от 33 600 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ РЁРµСЂР»РѕРє вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 33В 600 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-bar-2130",
-    "name": "Диван Бар Compact",
+    "name": "Р”РёРІР°РЅ Р‘Р°СЂ Compact",
     "priceFrom": 16000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2130/0.jpg?v=13",
-      "/images/catalog/2130/1.jpg?v=13",
-      "/images/catalog/2130/2.jpg?v=13"
+      "/images/catalog/2130/0.jpg?v=15",
+      "/images/catalog/2130/1.jpg?v=15",
+      "/images/catalog/2130/2.jpg?v=15"
     ],
-    "description": "Диван Бар Compact — прямые диваны салона Valentin от 16 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ Р‘Р°СЂ Compact вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 16В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "kreslo-kokteylnoe-2-2140",
-    "name": "Кресло коктейльное Soft",
+    "name": "РљСЂРµСЃР»Рѕ РєРѕРєС‚РµР№Р»СЊРЅРѕРµ Soft",
     "priceFrom": 12000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2140/0.jpg?v=13",
-      "/images/catalog/2140/1.jpg?v=13",
-      "/images/catalog/2140/2.jpg?v=13"
+      "/images/catalog/2140/0.jpg?v=15",
+      "/images/catalog/2140/1.jpg?v=15",
+      "/images/catalog/2140/2.jpg?v=15"
     ],
-    "description": "Кресло коктейльное Soft — кресла салона Valentin от 12 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСЂРµСЃР»Рѕ РєРѕРєС‚РµР№Р»СЊРЅРѕРµ Soft вЂ” РєСЂРµСЃР»Р° СЃР°Р»РѕРЅР° Valentin РѕС‚ 12В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "kuhnya-venetsiya-2120",
-    "name": "Кухня Венеция",
+    "name": "РљСѓС…РЅСЏ Р’РµРЅРµС†РёСЏ",
     "priceFrom": 193000,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/2120/0.jpg?v=13",
-      "/images/catalog/2120/1.jpg?v=13",
-      "/images/catalog/2120/2.jpg?v=13"
+      "/images/catalog/2120/0.jpg?v=15",
+      "/images/catalog/2120/1.jpg?v=15",
+      "/images/catalog/2120/2.jpg?v=15"
     ],
-    "description": "Кухня Венеция — кухни салона Valentin от 193 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСѓС…РЅСЏ Р’РµРЅРµС†РёСЏ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 193В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Индивидуальные размеры"
+      "РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹"
     ]
   },
   {
     "id": "prihozhaya-semela-4937",
-    "name": "Прихожая Семела",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ РЎРµРјРµР»Р°",
     "priceFrom": 141400,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/4937/0.jpg?v=13",
-      "/images/catalog/4937/1.jpg?v=13",
-      "/images/catalog/4937/2.jpg?v=13"
+      "/images/catalog/4937/0.jpg?v=15",
+      "/images/catalog/4937/1.jpg?v=15",
+      "/images/catalog/4937/2.jpg?v=15"
     ],
-    "description": "Прихожая Семела — прихожие салона Valentin от 141 400 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ РЎРµРјРµР»Р° вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 141В 400 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "prihozhaya-s-pufom-2161",
-    "name": "Прихожая с пуфом",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ СЃ РїСѓС„РѕРј",
     "priceFrom": 68900,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2161/0.jpg?v=13",
-      "/images/catalog/2161/1.jpg?v=13",
-      "/images/catalog/2161/2.jpg?v=13"
+      "/images/catalog/2161/0.jpg?v=15",
+      "/images/catalog/2161/1.jpg?v=15",
+      "/images/catalog/2161/2.jpg?v=15"
     ],
-    "description": "Прихожая с пуфом — прихожие салона Valentin от 68 900 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ СЃ РїСѓС„РѕРј вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 68В 900 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "prihozhaya-assimetriya-2134",
-    "name": "Прихожая Ассиметрия",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ РђСЃСЃРёРјРµС‚СЂРёСЏ",
     "priceFrom": 49800,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2134/0.jpg?v=13",
-      "/images/catalog/2134/1.jpg?v=13",
-      "/images/catalog/2134/2.jpg?v=13"
+      "/images/catalog/2134/0.jpg?v=15",
+      "/images/catalog/2134/1.jpg?v=15",
+      "/images/catalog/2134/2.jpg?v=15"
     ],
-    "description": "Прихожая Ассиметрия — прихожие салона Valentin от 49 800 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ РђСЃСЃРёРјРµС‚СЂРёСЏ вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 49В 800 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "kreslo-kokteylnoe-2-2144",
-    "name": "Кресло коктейльное Lounge",
+    "name": "РљСЂРµСЃР»Рѕ РєРѕРєС‚РµР№Р»СЊРЅРѕРµ Lounge",
     "priceFrom": 12000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2144/0.jpg?v=13",
-      "/images/catalog/2144/1.jpg?v=13",
-      "/images/catalog/2144/2.jpg?v=13"
+      "/images/catalog/2144/0.jpg?v=15",
+      "/images/catalog/2144/1.jpg?v=15",
+      "/images/catalog/2144/2.jpg?v=15"
     ],
-    "description": "Кресло коктейльное Lounge — кресла салона Valentin от 12 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСЂРµСЃР»Рѕ РєРѕРєС‚РµР№Р»СЊРЅРѕРµ Lounge вЂ” РєСЂРµСЃР»Р° СЃР°Р»РѕРЅР° Valentin РѕС‚ 12В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "prihozhaya-s-chasami-2156",
-    "name": "Прихожая с часами",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ СЃ С‡Р°СЃР°РјРё",
     "priceFrom": 73700,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2156/0.jpg?v=13",
-      "/images/catalog/2156/1.jpg?v=13",
-      "/images/catalog/2156/2.jpg?v=13"
+      "/images/catalog/2156/0.jpg?v=15",
+      "/images/catalog/2156/1.jpg?v=15",
+      "/images/catalog/2156/2.jpg?v=15"
     ],
-    "description": "Прихожая с часами — прихожие салона Valentin от 73 700 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ СЃ С‡Р°СЃР°РјРё вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 73В 700 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "kuhnya-sakura-2118",
-    "name": "Кухня Сакура",
+    "name": "РљСѓС…РЅСЏ РЎР°РєСѓСЂР°",
     "priceFrom": 160000,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/2118/0.jpg?v=13",
-      "/images/catalog/2118/1.jpg?v=13",
-      "/images/catalog/2118/2.jpg?v=13"
+      "/images/catalog/2118/0.jpg?v=15",
+      "/images/catalog/2118/1.jpg?v=15",
+      "/images/catalog/2118/2.jpg?v=15"
     ],
-    "description": "Кухня Сакура — кухни салона Valentin от 160 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РљСѓС…РЅСЏ РЎР°РєСѓСЂР° вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 160В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Индивидуальные размеры"
+      "РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹"
     ]
   },
   {
     "id": "banketka-obuvnitsa-3917",
-    "name": "Банкетка-обувница",
+    "name": "Р‘Р°РЅРєРµС‚РєР°-РѕР±СѓРІРЅРёС†Р°",
     "priceFrom": 45600,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/3917/0.jpg?v=13",
-      "/images/catalog/3917/1.jpg?v=13",
-      "/images/catalog/3917/2.jpg?v=13"
+      "/images/catalog/3917/0.jpg?v=15",
+      "/images/catalog/3917/1.jpg?v=15",
+      "/images/catalog/3917/2.jpg?v=15"
     ],
-    "description": "Банкетка-обувница — банкетки салона Valentin от 45 600 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р‘Р°РЅРєРµС‚РєР°-РѕР±СѓРІРЅРёС†Р° вЂ” Р±Р°РЅРєРµС‚РєРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 45В 600 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "prihozhaya-venetsiya-s-pufom-2136",
-    "name": "Прихожая Венеция с пуфом",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Р’РµРЅРµС†РёСЏ СЃ РїСѓС„РѕРј",
     "priceFrom": 30000,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2136/0.jpg?v=13",
-      "/images/catalog/2136/1.jpg?v=13",
-      "/images/catalog/2136/2.jpg?v=13"
+      "/images/catalog/2136/0.jpg?v=15",
+      "/images/catalog/2136/1.jpg?v=15",
+      "/images/catalog/2136/2.jpg?v=15"
     ],
-    "description": "Прихожая Венеция с пуфом — прихожие салона Valentin от 30 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Р’РµРЅРµС†РёСЏ СЃ РїСѓС„РѕРј вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 30В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "prihozhaya-s-pufom-2157",
-    "name": "Прихожая с пуфом Compact",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ СЃ РїСѓС„РѕРј Compact",
     "priceFrom": 63600,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2157/0.jpg?v=13",
-      "/images/catalog/2157/1.jpg?v=13",
-      "/images/catalog/2157/2.jpg?v=13"
+      "/images/catalog/2157/0.jpg?v=15",
+      "/images/catalog/2157/1.jpg?v=15",
+      "/images/catalog/2157/2.jpg?v=15"
     ],
-    "description": "Прихожая с пуфом Compact — прихожие салона Valentin от 63 600 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ СЃ РїСѓС„РѕРј Compact вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 63В 600 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "prihozhaya-s-zerkalom-2159",
-    "name": "Прихожая с зеркалом",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ СЃ Р·РµСЂРєР°Р»РѕРј",
     "priceFrom": 67600,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2159/0.jpg?v=13",
-      "/images/catalog/2159/1.jpg?v=13",
-      "/images/catalog/2159/2.jpg?v=13"
+      "/images/catalog/2159/0.jpg?v=15",
+      "/images/catalog/2159/1.jpg?v=15",
+      "/images/catalog/2159/2.jpg?v=15"
     ],
-    "description": "Прихожая с зеркалом — прихожие салона Valentin от 67 600 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСЂРёС…РѕР¶Р°СЏ СЃ Р·РµСЂРєР°Р»РѕРј вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 67В 600 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "obuvintsa-classic-3919",
-    "name": "Обувница Classic",
+    "name": "РћР±СѓРІРЅРёС†Р° Classic",
     "priceFrom": 47800,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/3919/0.jpg?v=13",
-      "/images/catalog/3919/1.jpg?v=13",
-      "/images/catalog/3919/2.jpg?v=13"
+      "/images/catalog/3919/0.jpg?v=15",
+      "/images/catalog/3919/1.jpg?v=15",
+      "/images/catalog/3919/2.jpg?v=15"
     ],
-    "description": "Обувница Classic — прихожие салона Valentin от 47 800 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РћР±СѓРІРЅРёС†Р° Classic вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 47В 800 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "divan-prestizh-4745",
-    "name": "Диван Престиж",
+    "name": "Р”РёРІР°РЅ РџСЂРµСЃС‚РёР¶",
     "priceFrom": 18000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/4745/0.jpg?v=13",
-      "/images/catalog/4745/1.jpg?v=13",
-      "/images/catalog/4745/2.jpg?v=13"
+      "/images/catalog/4745/0.jpg?v=15",
+      "/images/catalog/4745/1.jpg?v=15",
+      "/images/catalog/4745/2.jpg?v=15"
     ],
-    "description": "Диван Престиж — прямые диваны салона Valentin от 18 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ РџСЂРµСЃС‚РёР¶ вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 18В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-valeo-2152",
-    "name": "Диван Valeo",
+    "name": "Р”РёРІР°РЅ Valeo",
     "priceFrom": 41000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2152/0.jpg?v=13",
-      "/images/catalog/2152/1.jpg?v=13",
-      "/images/catalog/2152/2.jpg?v=13"
+      "/images/catalog/2152/0.jpg?v=15",
+      "/images/catalog/2152/1.jpg?v=15",
+      "/images/catalog/2152/2.jpg?v=15"
     ],
-    "description": "Диван Valeo — прямые диваны салона Valentin от 41 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ Valeo вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 41В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-kokteylnaya-dvoyka-2149",
-    "name": "Диван Коктейльная двойка",
+    "name": "Р”РёРІР°РЅ РљРѕРєС‚РµР№Р»СЊРЅР°СЏ РґРІРѕР№РєР°",
     "priceFrom": 27500,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2149/0.jpg?v=13",
-      "/images/catalog/2149/1.jpg?v=13",
-      "/images/catalog/2149/2.jpg?v=13"
+      "/images/catalog/2149/0.jpg?v=15",
+      "/images/catalog/2149/1.jpg?v=15",
+      "/images/catalog/2149/2.jpg?v=15"
     ],
-    "description": "Диван Коктейльная двойка — прямые диваны салона Valentin от 27 500 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ РљРѕРєС‚РµР№Р»СЊРЅР°СЏ РґРІРѕР№РєР° вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 27В 500 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "zerkalo-nastennoe-3918",
-    "name": "Зеркало настенное",
+    "name": "Р—РµСЂРєР°Р»Рѕ РЅР°СЃС‚РµРЅРЅРѕРµ",
     "priceFrom": 36200,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/3918/0.jpg?v=13",
-      "/images/catalog/3918/1.jpg?v=13",
-      "/images/catalog/3918/2.jpg?v=13"
+      "/images/catalog/3918/0.jpg?v=15",
+      "/images/catalog/3918/1.jpg?v=15",
+      "/images/catalog/3918/2.jpg?v=15"
     ],
-    "description": "Зеркало настенное — зеркала салона Valentin от 36 200 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р—РµСЂРєР°Р»Рѕ РЅР°СЃС‚РµРЅРЅРѕРµ вЂ” Р·РµСЂРєР°Р»Р° СЃР°Р»РѕРЅР° Valentin РѕС‚ 36В 200 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "puf-classic-2160",
-    "name": "Пуф Classic",
+    "name": "РџСѓС„ Classic",
     "priceFrom": 34000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2160/0.jpg?v=13",
-      "/images/catalog/2160/1.jpg?v=13",
-      "/images/catalog/2160/2.jpg?v=13"
+      "/images/catalog/2160/0.jpg?v=15",
+      "/images/catalog/2160/1.jpg?v=15",
+      "/images/catalog/2160/2.jpg?v=15"
     ],
-    "description": "Пуф Classic — пуфы салона Valentin от 34 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РџСѓС„ Classic вЂ” РїСѓС„С‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 34В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "divan-prestizh-3920",
-    "name": "Диван Престиж Comfort",
+    "name": "Р”РёРІР°РЅ РџСЂРµСЃС‚РёР¶ Comfort",
     "priceFrom": 22000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/3920/0.jpg?v=13",
-      "/images/catalog/3920/1.jpg?v=13",
-      "/images/catalog/3920/2.jpg?v=13"
+      "/images/catalog/3920/0.jpg?v=15",
+      "/images/catalog/3920/1.jpg?v=15",
+      "/images/catalog/3920/2.jpg?v=15"
     ],
-    "description": "Диван Престиж Comfort — прямые диваны салона Valentin от 22 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "Р”РёРІР°РЅ РџСЂРµСЃС‚РёР¶ Comfort вЂ” РїСЂСЏРјС‹Рµ РґРёРІР°РЅС‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 22В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "shkaf-platyanoy-2155",
-    "name": "Шкаф платяной",
+    "name": "РЁРєР°С„ РїР»Р°С‚СЏРЅРѕР№",
     "priceFrom": 65500,
     "materials": [
-      "дуб"
+      "РґСѓР±"
     ],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/2155/0.jpg?v=13",
-      "/images/catalog/2155/1.jpg?v=13",
-      "/images/catalog/2155/2.jpg?v=13"
+      "/images/catalog/2155/0.jpg?v=15",
+      "/images/catalog/2155/1.jpg?v=15",
+      "/images/catalog/2155/2.jpg?v=15"
     ],
-    "description": "Шкаф платяной — распашные шкафы салона Valentin от 65 500 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РЁРєР°С„ РїР»Р°С‚СЏРЅРѕР№ вЂ” СЂР°СЃРїР°С€РЅС‹Рµ С€РєР°С„С‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 65В 500 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Для прихожей"
+      "Р”Р»СЏ РїСЂРёС…РѕР¶РµР№"
     ]
   },
   {
     "id": "stul-princess-2151",
-    "name": "Стул Princess",
+    "name": "РЎС‚СѓР» Princess",
     "priceFrom": 8000,
     "materials": [
-      "велюр"
+      "РІРµР»СЋСЂ"
     ],
     "inStock": false,
-    "category": "диваны",
+    "category": "РґРёРІР°РЅС‹",
     "images": [
-      "/images/catalog/2151/0.jpg?v=13",
-      "/images/catalog/2151/1.jpg?v=13",
-      "/images/catalog/2151/2.jpg?v=13"
+      "/images/catalog/2151/0.jpg?v=15",
+      "/images/catalog/2151/1.jpg?v=15",
+      "/images/catalog/2151/2.jpg?v=15"
     ],
-    "description": "Стул Princess — стулья салона Valentin от 8 000 ₽. Салон в МЦ «Мебельный город», Белгород.",
+    "description": "РЎС‚СѓР» Princess вЂ” СЃС‚СѓР»СЊСЏ СЃР°Р»РѕРЅР° Valentin РѕС‚ 8В 000 в‚Ѕ. РЎР°Р»РѕРЅ РІ РњР¦ В«РњРµР±РµР»СЊРЅС‹Р№ РіРѕСЂРѕРґВ», Р‘РµР»РіРѕСЂРѕРґ.",
     "features": [
-      "Мягкая мебель"
+      "РњСЏРіРєР°СЏ РјРµР±РµР»СЊ"
     ]
   },
   {
     "id": "prihozhaya-softline-5001",
-    "name": "Прихожая Softline",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Softline",
     "priceFrom": 189000,
-    "materials": ["кашемир", "латунь"],
+    "materials": ["РєР°С€РµРјРёСЂ", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5001/0.jpg?v=13",
-      "/images/catalog/5001/1.jpg?v=13",
-      "/images/catalog/5001/2.jpg?v=13"
+      "/images/catalog/5001/0.jpg?v=15",
+      "/images/catalog/5001/1.jpg?v=15",
+      "/images/catalog/5001/2.jpg?v=15"
     ],
-    "description": "Прихожая Softline — прихожие салона Valentin от 189 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Softline вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 189В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-aura-5002",
-    "name": "Кухня Аура",
+    "name": "РљСѓС…РЅСЏ РђСѓСЂР°",
     "priceFrom": 245000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5002/0.jpg?v=13",
-      "/images/catalog/5002/1.jpg?v=13",
-      "/images/catalog/5002/2.jpg?v=13"
+      "/images/catalog/5002/0.jpg?v=15",
+      "/images/catalog/5002/1.jpg?v=15",
+      "/images/catalog/5002/2.jpg?v=15"
     ],
-    "description": "Кухня Аура — кухни салона Valentin от 245 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РђСѓСЂР° вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 245В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "shkaf-linea-5003",
-    "name": "Шкаф Linea",
+    "name": "РЁРєР°С„ Linea",
     "priceFrom": 98000,
-    "materials": ["дуб"],
+    "materials": ["РґСѓР±"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5003/0.jpg?v=13",
-      "/images/catalog/5003/1.jpg?v=13",
-      "/images/catalog/5003/2.jpg?v=13"
+      "/images/catalog/5003/0.jpg?v=15",
+      "/images/catalog/5003/1.jpg?v=15",
+      "/images/catalog/5003/2.jpg?v=15"
     ],
-    "description": "Шкаф Linea — шкафы салона Valentin от 98 000 ₽.",
-    "features": ["Для прихожей", "Под заказ"]
+    "description": "РЁРєР°С„ Linea вЂ” С€РєР°С„С‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 98В 000 в‚Ѕ.",
+    "features": ["Р”Р»СЏ РїСЂРёС…РѕР¶РµР№", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "detskaya-nest-5004",
-    "name": "Детская Nest",
+    "name": "Р”РµС‚СЃРєР°СЏ Nest",
     "priceFrom": 165000,
-    "materials": ["дуб", "кашемир"],
+    "materials": ["РґСѓР±", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "мебель для дома",
+    "category": "РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
     "images": [
-      "/images/catalog/5004/0.jpg?v=13",
-      "/images/catalog/5004/1.jpg?v=13",
-      "/images/catalog/5004/2.jpg?v=13"
+      "/images/catalog/5004/0.jpg?v=15",
+      "/images/catalog/5004/1.jpg?v=15",
+      "/images/catalog/5004/2.jpg?v=15"
     ],
-    "description": "Детская Nest — мебель для дома салона Valentin от 165 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "Р”РµС‚СЃРєР°СЏ Nest вЂ” РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР° СЃР°Р»РѕРЅР° Valentin РѕС‚ 165В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-forma-5005",
-    "name": "Прихожая Forma",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Forma",
     "priceFrom": 142000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5005/0.jpg?v=13",
-      "/images/catalog/5005/1.jpg?v=13",
-      "/images/catalog/5005/2.jpg?v=13"
+      "/images/catalog/5005/0.jpg?v=15",
+      "/images/catalog/5005/1.jpg?v=15",
+      "/images/catalog/5005/2.jpg?v=15"
     ],
-    "description": "Прихожая Forma — прихожие салона Valentin от 142 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Forma вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 142В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "gostinaya-casa-5006",
-    "name": "Гостиная Casa",
+    "name": "Р“РѕСЃС‚РёРЅР°СЏ Casa",
     "priceFrom": 128000,
-    "materials": ["дуб", "кашемир"],
+    "materials": ["РґСѓР±", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "мебель для дома",
+    "category": "РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
     "images": [
-      "/images/catalog/5006/0.jpg?v=13",
-      "/images/catalog/5006/1.jpg?v=13",
-      "/images/catalog/5006/2.jpg?v=13"
+      "/images/catalog/5006/0.jpg?v=15",
+      "/images/catalog/5006/1.jpg?v=15",
+      "/images/catalog/5006/2.jpg?v=15"
     ],
-    "description": "Гостиная Casa — мебель для дома салона Valentin от 128 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "Р“РѕСЃС‚РёРЅР°СЏ Casa вЂ” РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР° СЃР°Р»РѕРЅР° Valentin РѕС‚ 128В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "mebel-atelier-5007",
-    "name": "Мебель Atelier",
+    "name": "РњРµР±РµР»СЊ Atelier",
     "priceFrom": 156000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "мебель для дома",
+    "category": "РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
     "images": [
-      "/images/catalog/5007/0.jpg?v=13",
-      "/images/catalog/5007/1.jpg?v=13",
-      "/images/catalog/5007/2.jpg?v=13"
+      "/images/catalog/5007/0.jpg?v=15",
+      "/images/catalog/5007/1.jpg?v=15",
+      "/images/catalog/5007/2.jpg?v=15"
     ],
-    "description": "Мебель Atelier — мебель для дома салона Valentin от 156 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РњРµР±РµР»СЊ Atelier вЂ” РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР° СЃР°Р»РѕРЅР° Valentin РѕС‚ 156В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-mirror-grande-5008",
-    "name": "Прихожая Mirror Grande",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Mirror Grande",
     "priceFrom": 175000,
-    "materials": ["латунь", "кашемир"],
+    "materials": ["Р»Р°С‚СѓРЅСЊ", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5008/0.jpg?v=13",
-      "/images/catalog/5008/1.jpg?v=13",
-      "/images/catalog/5008/2.jpg?v=13"
+      "/images/catalog/5008/0.jpg?v=15",
+      "/images/catalog/5008/1.jpg?v=15",
+      "/images/catalog/5008/2.jpg?v=15"
     ],
-    "description": "Прихожая Mirror Grande — прихожие салона Valentin от 175 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Mirror Grande вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 175В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "stenka-domus-5009",
-    "name": "Стенка Domus",
+    "name": "РЎС‚РµРЅРєР° Domus",
     "priceFrom": 198000,
-    "materials": ["дуб", "мрамор"],
+    "materials": ["РґСѓР±", "РјСЂР°РјРѕСЂ"],
     "inStock": false,
-    "category": "мебель для дома",
+    "category": "РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
     "images": [
-      "/images/catalog/5009/0.jpg?v=13",
-      "/images/catalog/5009/1.jpg?v=13",
-      "/images/catalog/5009/2.jpg?v=13"
+      "/images/catalog/5009/0.jpg?v=15",
+      "/images/catalog/5009/1.jpg?v=15",
+      "/images/catalog/5009/2.jpg?v=15"
     ],
-    "description": "Стенка Domus — мебель для дома салона Valentin от 198 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РЎС‚РµРЅРєР° Domus вЂ” РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР° СЃР°Р»РѕРЅР° Valentin РѕС‚ 198В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-vista-5010",
-    "name": "Прихожая Vista",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Vista",
     "priceFrom": 134000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5010/0.jpg?v=13",
-      "/images/catalog/5010/1.jpg?v=13",
-      "/images/catalog/5010/2.jpg?v=13"
+      "/images/catalog/5010/0.jpg?v=15",
+      "/images/catalog/5010/1.jpg?v=15",
+      "/images/catalog/5010/2.jpg?v=15"
     ],
-    "description": "Прихожая Vista — прихожие салона Valentin от 134 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Vista вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 134В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-capitone-5011",
-    "name": "Прихожая Capitonné",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ CapitonnГ©",
     "priceFrom": 168000,
-    "materials": ["кашемир", "латунь"],
+    "materials": ["РєР°С€РµРјРёСЂ", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5011/0.jpg?v=13",
-      "/images/catalog/5011/1.jpg?v=13",
-      "/images/catalog/5011/2.jpg?v=13"
+      "/images/catalog/5011/0.jpg?v=15",
+      "/images/catalog/5011/1.jpg?v=15",
+      "/images/catalog/5011/2.jpg?v=15"
     ],
-    "description": "Прихожая Capitonné — прихожие салона Valentin от 168 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ CapitonnГ© вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 168В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "tv-zona-gallery-5012",
-    "name": "ТВ-зона Gallery",
+    "name": "РўР’-Р·РѕРЅР° Gallery",
     "priceFrom": 215000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "мебель для дома",
+    "category": "РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
     "images": [
-      "/images/catalog/5012/0.jpg?v=13",
-      "/images/catalog/5012/1.jpg?v=13",
-      "/images/catalog/5012/2.jpg?v=13"
+      "/images/catalog/5012/0.jpg?v=15",
+      "/images/catalog/5012/1.jpg?v=15",
+      "/images/catalog/5012/2.jpg?v=15"
     ],
-    "description": "ТВ-зона Gallery — мебель для дома салона Valentin от 215 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РўР’-Р·РѕРЅР° Gallery вЂ” РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР° СЃР°Р»РѕРЅР° Valentin РѕС‚ 215В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-valencia-5013",
-    "name": "Прихожая Valencia Classic",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Valencia Classic",
     "priceFrom": 145000,
-    "materials": ["латунь", "кашемир"],
+    "materials": ["Р»Р°С‚СѓРЅСЊ", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5013/0.jpg?v=13",
-      "/images/catalog/5013/1.jpg?v=13",
-      "/images/catalog/5013/2.jpg?v=13"
+      "/images/catalog/5013/0.jpg?v=15",
+      "/images/catalog/5013/1.jpg?v=15",
+      "/images/catalog/5013/2.jpg?v=15"
     ],
-    "description": "Прихожая Valencia Classic — прихожие салона Valentin от 145 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Valencia Classic вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 145В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-nordic-oak-5014",
-    "name": "Прихожая Nordic Oak",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Nordic Oak",
     "priceFrom": 168000,
-    "materials": ["дуб", "кашемир"],
+    "materials": ["РґСѓР±", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5014/0.jpg?v=13",
-      "/images/catalog/5014/1.jpg?v=13",
-      "/images/catalog/5014/2.jpg?v=13"
+      "/images/catalog/5014/0.jpg?v=15",
+      "/images/catalog/5014/1.jpg?v=15",
+      "/images/catalog/5014/2.jpg?v=15"
     ],
-    "description": "Прихожая Nordic Oak — прихожие салона Valentin от 168 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Nordic Oak вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 168В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-emerald-suite-5015",
-    "name": "Прихожая Emerald Suite",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Emerald Suite",
     "priceFrom": 189000,
-    "materials": ["орех", "кожа"],
+    "materials": ["РѕСЂРµС…", "РєРѕР¶Р°"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5015/0.jpg?v=13",
-      "/images/catalog/5015/1.jpg?v=13",
-      "/images/catalog/5015/2.jpg?v=13"
+      "/images/catalog/5015/0.jpg?v=15",
+      "/images/catalog/5015/1.jpg?v=15",
+      "/images/catalog/5015/2.jpg?v=15"
     ],
-    "description": "Прихожая Emerald Suite — прихожие салона Valentin от 189 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Emerald Suite вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 189В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-victoria-5016",
-    "name": "Прихожая Victoria",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Victoria",
     "priceFrom": 158000,
-    "materials": ["латунь", "кашемир"],
+    "materials": ["Р»Р°С‚СѓРЅСЊ", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5016/0.jpg?v=13",
-      "/images/catalog/5016/1.jpg?v=13",
-      "/images/catalog/5016/2.jpg?v=13"
+      "/images/catalog/5016/0.jpg?v=15",
+      "/images/catalog/5016/1.jpg?v=15",
+      "/images/catalog/5016/2.jpg?v=15"
     ],
-    "description": "Прихожая Victoria — прихожие салона Valentin от 158 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Victoria вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 158В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "gostinaya-imperial-5017",
-    "name": "Гостиная Imperial Wall",
+    "name": "Р“РѕСЃС‚РёРЅР°СЏ Imperial Wall",
     "priceFrom": 248000,
-    "materials": ["латунь", "кашемир"],
+    "materials": ["Р»Р°С‚СѓРЅСЊ", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "мебель для дома",
+    "category": "РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
     "images": [
-      "/images/catalog/5017/0.jpg?v=13",
-      "/images/catalog/5017/1.jpg?v=13",
-      "/images/catalog/5017/2.jpg?v=13"
+      "/images/catalog/5017/0.jpg?v=15",
+      "/images/catalog/5017/1.jpg?v=15",
+      "/images/catalog/5017/2.jpg?v=15"
     ],
-    "description": "Гостиная Imperial Wall — мебель для дома салона Valentin от 248 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "Р“РѕСЃС‚РёРЅР°СЏ Imperial Wall вЂ” РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР° СЃР°Р»РѕРЅР° Valentin РѕС‚ 248В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "shkaf-wenge-5018",
-    "name": "Шкаф Wenge Classic",
+    "name": "РЁРєР°С„ Wenge Classic",
     "priceFrom": 135000,
-    "materials": ["орех"],
+    "materials": ["РѕСЂРµС…"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5018/0.jpg?v=13",
-      "/images/catalog/5018/1.jpg?v=13",
-      "/images/catalog/5018/2.jpg?v=13"
+      "/images/catalog/5018/0.jpg?v=15",
+      "/images/catalog/5018/1.jpg?v=15",
+      "/images/catalog/5018/2.jpg?v=15"
     ],
-    "description": "Шкаф Wenge Classic — шкафы салона Valentin от 135 000 ₽.",
-    "features": ["Для прихожей", "Под заказ"]
+    "description": "РЁРєР°С„ Wenge Classic вЂ” С€РєР°С„С‹ СЃР°Р»РѕРЅР° Valentin РѕС‚ 135В 000 в‚Ѕ.",
+    "features": ["Р”Р»СЏ РїСЂРёС…РѕР¶РµР№", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-cream-tuft-5019",
-    "name": "Прихожая Cream Tuft",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Cream Tuft",
     "priceFrom": 98000,
-    "materials": ["кашемир", "латунь"],
+    "materials": ["РєР°С€РµРјРёСЂ", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5019/0.jpg?v=13",
-      "/images/catalog/5019/1.jpg?v=13",
-      "/images/catalog/5019/2.jpg?v=13"
+      "/images/catalog/5019/0.jpg?v=15",
+      "/images/catalog/5019/1.jpg?v=15",
+      "/images/catalog/5019/2.jpg?v=15"
     ],
-    "description": "Прихожая Cream Tuft — прихожие салона Valentin от 98 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Cream Tuft вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 98В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "prihozhaya-champagne-5020",
-    "name": "Прихожая Champagne Elite",
+    "name": "РџСЂРёС…РѕР¶Р°СЏ Champagne Elite",
     "priceFrom": 185000,
-    "materials": ["латунь", "кашемир"],
+    "materials": ["Р»Р°С‚СѓРЅСЊ", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "прихожие",
+    "category": "РїСЂРёС…РѕР¶РёРµ",
     "images": [
-      "/images/catalog/5020/0.jpg?v=13",
-      "/images/catalog/5020/1.jpg?v=13",
-      "/images/catalog/5020/2.jpg?v=13"
+      "/images/catalog/5020/0.jpg?v=15",
+      "/images/catalog/5020/1.jpg?v=15",
+      "/images/catalog/5020/2.jpg?v=15"
     ],
-    "description": "Прихожая Champagne Elite — прихожие салона Valentin от 185 000 ₽.",
-    "features": ["По индивидуальным размерам", "Под заказ"]
+    "description": "РџСЂРёС…РѕР¶Р°СЏ Champagne Elite вЂ” РїСЂРёС…РѕР¶РёРµ СЃР°Р»РѕРЅР° Valentin РѕС‚ 185В 000 в‚Ѕ.",
+    "features": ["РџРѕ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рј СЂР°Р·РјРµСЂР°Рј", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-oliviya-5021",
-    "name": "Кухня Оливия",
+    "name": "РљСѓС…РЅСЏ РћР»РёРІРёСЏ",
     "priceFrom": 268000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5021/0.jpg?v=13",
-      "/images/catalog/5021/1.jpg?v=13",
-      "/images/catalog/5021/2.jpg?v=13"
+      "/images/catalog/5021/0.jpg?v=15",
+      "/images/catalog/5021/1.jpg?v=15",
+      "/images/catalog/5021/2.jpg?v=15"
     ],
-    "description": "Кухня Оливия — кухни салона Valentin от 268 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РћР»РёРІРёСЏ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 268В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-milana-5022",
-    "name": "Кухня Милана",
+    "name": "РљСѓС…РЅСЏ РњРёР»Р°РЅР°",
     "priceFrom": 198000,
-    "materials": ["кашемир", "дуб"],
+    "materials": ["РєР°С€РµРјРёСЂ", "РґСѓР±"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5022/0.jpg?v=13",
-      "/images/catalog/5022/1.jpg?v=13",
-      "/images/catalog/5022/2.jpg?v=13"
+      "/images/catalog/5022/0.jpg?v=15",
+      "/images/catalog/5022/1.jpg?v=15",
+      "/images/catalog/5022/2.jpg?v=15"
     ],
-    "description": "Кухня Милана — кухни салона Valentin от 198 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РњРёР»Р°РЅР° вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 198В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-umbra-5023",
-    "name": "Кухня Умбра",
+    "name": "РљСѓС…РЅСЏ РЈРјР±СЂР°",
     "priceFrom": 255000,
-    "materials": ["дуб", "кашемир"],
+    "materials": ["РґСѓР±", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5023/0.jpg?v=13",
-      "/images/catalog/5023/1.jpg?v=13",
-      "/images/catalog/5023/2.jpg?v=13"
+      "/images/catalog/5023/0.jpg?v=15",
+      "/images/catalog/5023/1.jpg?v=15",
+      "/images/catalog/5023/2.jpg?v=15"
     ],
-    "description": "Кухня Умбра — кухни салона Valentin от 255 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РЈРјР±СЂР° вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 255В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-nuage-5024",
-    "name": "Кухня Nuage",
+    "name": "РљСѓС…РЅСЏ Nuage",
     "priceFrom": 232000,
-    "materials": ["дуб", "кашемир"],
+    "materials": ["РґСѓР±", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5024/0.jpg?v=13",
-      "/images/catalog/5024/1.jpg?v=13",
-      "/images/catalog/5024/2.jpg?v=13"
+      "/images/catalog/5024/0.jpg?v=15",
+      "/images/catalog/5024/1.jpg?v=15",
+      "/images/catalog/5024/2.jpg?v=15"
     ],
-    "description": "Кухня Nuage — кухни салона Valentin от 232 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ Nuage вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 232В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-avrora-5025",
-    "name": "Кухня Аврора",
+    "name": "РљСѓС…РЅСЏ РђРІСЂРѕСЂР°",
     "priceFrom": 278000,
-    "materials": ["мрамор", "латунь"],
+    "materials": ["РјСЂР°РјРѕСЂ", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5025/0.jpg?v=13",
-      "/images/catalog/5025/1.jpg?v=13",
-      "/images/catalog/5025/2.jpg?v=13"
+      "/images/catalog/5025/0.jpg?v=15",
+      "/images/catalog/5025/1.jpg?v=15",
+      "/images/catalog/5025/2.jpg?v=15"
     ],
-    "description": "Кухня Аврора — кухни салона Valentin от 278 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РђРІСЂРѕСЂР° вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 278В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-amber-5026",
-    "name": "Кухня Амбер",
+    "name": "РљСѓС…РЅСЏ РђРјР±РµСЂ",
     "priceFrom": 215000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5026/0.jpg?v=13",
-      "/images/catalog/5026/1.jpg?v=13",
-      "/images/catalog/5026/2.jpg?v=13"
+      "/images/catalog/5026/0.jpg?v=15",
+      "/images/catalog/5026/1.jpg?v=15",
+      "/images/catalog/5026/2.jpg?v=15"
     ],
-    "description": "Кухня Амбер — кухни салона Valentin от 215 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РђРјР±РµСЂ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 215В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-oliva-5027",
-    "name": "Кухня Олива",
+    "name": "РљСѓС…РЅСЏ РћР»РёРІР°",
     "priceFrom": 248000,
-    "materials": ["дуб", "латунь"],
+    "materials": ["РґСѓР±", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5027/0.jpg?v=13",
-      "/images/catalog/5027/1.jpg?v=13",
-      "/images/catalog/5027/2.jpg?v=13"
+      "/images/catalog/5027/0.jpg?v=15",
+      "/images/catalog/5027/1.jpg?v=15",
+      "/images/catalog/5027/2.jpg?v=15"
     ],
-    "description": "Кухня Олива — кухни салона Valentin от 248 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РћР»РёРІР° вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 248В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-shampan-5028",
-    "name": "Кухня Шампань",
+    "name": "РљСѓС…РЅСЏ РЁР°РјРїР°РЅСЊ",
     "priceFrom": 285000,
-    "materials": ["мрамор", "латунь"],
+    "materials": ["РјСЂР°РјРѕСЂ", "Р»Р°С‚СѓРЅСЊ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5028/0.jpg?v=13",
-      "/images/catalog/5028/1.jpg?v=13",
-      "/images/catalog/5028/2.jpg?v=13"
+      "/images/catalog/5028/0.jpg?v=15",
+      "/images/catalog/5028/1.jpg?v=15",
+      "/images/catalog/5028/2.jpg?v=15"
     ],
-    "description": "Кухня Шампань — кухни салона Valentin от 285 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РЁР°РјРїР°РЅСЊ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 285В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-laguna-5029",
-    "name": "Кухня Лагуна",
+    "name": "РљСѓС…РЅСЏ Р›Р°РіСѓРЅР°",
     "priceFrom": 262000,
-    "materials": ["дуб", "мрамор"],
+    "materials": ["РґСѓР±", "РјСЂР°РјРѕСЂ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5029/0.jpg?v=13",
-      "/images/catalog/5029/1.jpg?v=13",
-      "/images/catalog/5029/2.jpg?v=13"
+      "/images/catalog/5029/0.jpg?v=15",
+      "/images/catalog/5029/1.jpg?v=15",
+      "/images/catalog/5029/2.jpg?v=15"
     ],
-    "description": "Кухня Лагуна — кухни салона Valentin от 262 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ Р›Р°РіСѓРЅР° вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 262В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-etual-5030",
-    "name": "Кухня Этуаль",
+    "name": "РљСѓС…РЅСЏ Р­С‚СѓР°Р»СЊ",
     "priceFrom": 205000,
-    "materials": ["дуб", "кашемир"],
+    "materials": ["РґСѓР±", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5030/0.jpg?v=13",
-      "/images/catalog/5030/1.jpg?v=13",
-      "/images/catalog/5030/2.jpg?v=13"
+      "/images/catalog/5030/0.jpg?v=15",
+      "/images/catalog/5030/1.jpg?v=15",
+      "/images/catalog/5030/2.jpg?v=15"
     ],
-    "description": "Кухня Этуаль — кухни салона Valentin от 205 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ Р­С‚СѓР°Р»СЊ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 205В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-versal-5031",
-    "name": "Кухня Версаль",
+    "name": "РљСѓС…РЅСЏ Р’РµСЂСЃР°Р»СЊ",
     "priceFrom": 295000,
-    "materials": ["кашемир", "мрамор"],
+    "materials": ["РєР°С€РµРјРёСЂ", "РјСЂР°РјРѕСЂ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5031/0.jpg?v=13",
-      "/images/catalog/5031/1.jpg?v=13",
-      "/images/catalog/5031/2.jpg?v=13"
+      "/images/catalog/5031/0.jpg?v=15",
+      "/images/catalog/5031/1.jpg?v=15",
+      "/images/catalog/5031/2.jpg?v=15"
     ],
-    "description": "Кухня Версаль — кухни салона Valentin от 295 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ Р’РµСЂСЃР°Р»СЊ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 295В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-kontrast-5032",
-    "name": "Кухня Контраст",
+    "name": "РљСѓС…РЅСЏ РљРѕРЅС‚СЂР°СЃС‚",
     "priceFrom": 238000,
-    "materials": ["дуб", "кашемир"],
+    "materials": ["РґСѓР±", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5032/0.jpg?v=13",
-      "/images/catalog/5032/1.jpg?v=13",
-      "/images/catalog/5032/2.jpg?v=13"
+      "/images/catalog/5032/0.jpg?v=15",
+      "/images/catalog/5032/1.jpg?v=15",
+      "/images/catalog/5032/2.jpg?v=15"
     ],
-    "description": "Кухня Контраст — кухни салона Valentin от 238 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РљРѕРЅС‚СЂР°СЃС‚ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 238В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-provans-5033",
-    "name": "Кухня Прованс",
+    "name": "РљСѓС…РЅСЏ РџСЂРѕРІР°РЅСЃ",
     "priceFrom": 188000,
-    "materials": ["кашемир", "дуб"],
+    "materials": ["РєР°С€РµРјРёСЂ", "РґСѓР±"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5033/0.jpg?v=13",
-      "/images/catalog/5033/1.jpg?v=13",
-      "/images/catalog/5033/2.jpg?v=13"
+      "/images/catalog/5033/0.jpg?v=15",
+      "/images/catalog/5033/1.jpg?v=15",
+      "/images/catalog/5033/2.jpg?v=15"
     ],
-    "description": "Кухня Прованс — кухни салона Valentin от 188 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ РџСЂРѕРІР°РЅСЃ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 188В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   },
   {
     "id": "kuhnya-belveder-5034",
-    "name": "Кухня Бельведер",
+    "name": "РљСѓС…РЅСЏ Р‘РµР»СЊРІРµРґРµСЂ",
     "priceFrom": 272000,
-    "materials": ["латунь", "кашемир"],
+    "materials": ["Р»Р°С‚СѓРЅСЊ", "РєР°С€РµРјРёСЂ"],
     "inStock": false,
-    "category": "кухни",
+    "category": "РєСѓС…РЅРё",
     "images": [
-      "/images/catalog/5034/0.jpg?v=13",
-      "/images/catalog/5034/1.jpg?v=13",
-      "/images/catalog/5034/2.jpg?v=13"
+      "/images/catalog/5034/0.jpg?v=15",
+      "/images/catalog/5034/1.jpg?v=15",
+      "/images/catalog/5034/2.jpg?v=15"
     ],
-    "description": "Кухня Бельведер — кухни салона Valentin от 272 000 ₽.",
-    "features": ["Индивидуальные размеры", "Под заказ"]
+    "description": "РљСѓС…РЅСЏ Р‘РµР»СЊРІРµРґРµСЂ вЂ” РєСѓС…РЅРё СЃР°Р»РѕРЅР° Valentin РѕС‚ 272В 000 в‚Ѕ.",
+    "features": ["РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹", "РџРѕРґ Р·Р°РєР°Р·"]
   }
 ];
 
 export const kitchenCollections: KitchenCollection[] = [
   {
     id: "kuhnya-miya-3852",
-    name: "Кухни",
-    tagline: "Индивидуальные размеры",
-    image: "/images/catalog/3852/0.jpg?v=13",
+    name: "РљСѓС…РЅРё",
+    tagline: "РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЂР°Р·РјРµСЂС‹",
+    image: "/images/catalog/3852/0.jpg?v=15",
     priceFrom: 120000,
   },
   {
     id: "prihozhaya-classic-7-2133",
-    name: "Прихожие",
-    tagline: "Под вашу нишу",
-    image: "/images/catalog/2133/0.jpg?v=13",
+    name: "РџСЂРёС…РѕР¶РёРµ",
+    tagline: "РџРѕРґ РІР°С€Сѓ РЅРёС€Сѓ",
+    image: "/images/catalog/2133/0.jpg?v=15",
     priceFrom: 249500,
   },
   {
     id: "divan-nord-2131",
-    name: "Диваны",
-    tagline: "Мягкая группа",
-    image: "/images/catalog/2131/0.jpg?v=13",
+    name: "Р”РёРІР°РЅС‹",
+    tagline: "РњСЏРіРєР°СЏ РіСЂСѓРїРїР°",
+    image: "/images/catalog/2131/0.jpg?v=15",
     priceFrom: 25800,
   },
 ];
 
 export const siteImages = {
-  /** Hero desktop: полный landscape-кадр кухни */
+  /** Hero desktop: РїРѕР»РЅС‹Р№ landscape-РєР°РґСЂ РєСѓС…РЅРё */
   hero: img("hero-kitchen-fill-2k.jpg"),
-  /** Hero mobile: портретный кроп острова, камня и латуни */
+  /** Hero mobile: РїРѕСЂС‚СЂРµС‚РЅС‹Р№ РєСЂРѕРї РѕСЃС‚СЂРѕРІР°, РєР°РјРЅСЏ Рё Р»Р°С‚СѓРЅРё */
   heroMobile: img("hero-kitchen-mobile-2k.jpg"),
-  /** До: кухня до установки (выровнено под слайдер) */
+  /** Р”Рѕ: РєСѓС…РЅСЏ РґРѕ СѓСЃС‚Р°РЅРѕРІРєРё (РІС‹СЂРѕРІРЅРµРЅРѕ РїРѕРґ СЃР»Р°Р№РґРµСЂ) */
   before: img("before-furnishing-v6.jpg"),
-  /** После: готовая кухня (выровнено под слайдер) */
+  /** РџРѕСЃР»Рµ: РіРѕС‚РѕРІР°СЏ РєСѓС…РЅСЏ (РІС‹СЂРѕРІРЅРµРЅРѕ РїРѕРґ СЃР»Р°Р№РґРµСЂ) */
   after: img("after-furnishing-v6.jpg"),
 };
 
-/** Категории в шапке; товары ищем по `products` */
+/** РљР°С‚РµРіРѕСЂРёРё РІ С€Р°РїРєРµ; С‚РѕРІР°СЂС‹ РёС‰РµРј РїРѕ `products` */
 export const searchSuggestions = [
-  { label: "Кухни", query: "кухня", category: "Кухни", cat: "кухни" as const },
-  { label: "Прихожие", query: "прихожая", category: "Прихожие", cat: "прихожие" as const },
-  { label: "Диваны", query: "диван", category: "Диваны", cat: "диваны" as const },
+  { label: "РљСѓС…РЅРё", query: "РєСѓС…РЅСЏ", category: "РљСѓС…РЅРё", cat: "РєСѓС…РЅРё" as const },
+  { label: "РџСЂРёС…РѕР¶РёРµ", query: "РїСЂРёС…РѕР¶Р°СЏ", category: "РџСЂРёС…РѕР¶РёРµ", cat: "РїСЂРёС…РѕР¶РёРµ" as const },
+  { label: "Р”РёРІР°РЅС‹", query: "РґРёРІР°РЅ", category: "Р”РёРІР°РЅС‹", cat: "РґРёРІР°РЅС‹" as const },
   {
-    label: "Мебель для дома",
-    query: "мебель",
-    category: "Мебель для дома",
-    cat: "мебель для дома" as const,
+    label: "РњРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
+    query: "РјРµР±РµР»СЊ",
+    category: "РњРµР±РµР»СЊ РґР»СЏ РґРѕРјР°",
+    cat: "РјРµР±РµР»СЊ РґР»СЏ РґРѕРјР°" as const,
   },
-  { label: "Обувницы", query: "обувниц", category: "Прихожие", cat: "прихожие" as const },
-  { label: "Пуфы", query: "пуф", category: "Диваны", cat: "диваны" as const },
+  { label: "РћР±СѓРІРЅРёС†С‹", query: "РѕР±СѓРІРЅРёС†", category: "РџСЂРёС…РѕР¶РёРµ", cat: "РїСЂРёС…РѕР¶РёРµ" as const },
+  { label: "РџСѓС„С‹", query: "РїСѓС„", category: "Р”РёРІР°РЅС‹", cat: "РґРёРІР°РЅС‹" as const },
 ];
