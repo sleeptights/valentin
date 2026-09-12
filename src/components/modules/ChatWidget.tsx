@@ -47,7 +47,7 @@ export function ChatWidget() {
   return (
     <div
       ref={rootRef}
-      className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-4 z-[90] flex flex-col items-end sm:right-6"
+      className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-4 z-[65] flex flex-col items-end sm:right-6"
     >
       <div
         role="dialog"

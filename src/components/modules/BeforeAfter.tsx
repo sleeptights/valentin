@@ -2,13 +2,15 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { siteImages } from "@/data/products";
 
 export function BeforeAfter() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [dragging, setDragging] = useState(false);
+  const dragging = useRef(false);
+  const axisLock = useRef<"x" | "y" | null>(null);
+  const start = useRef({ x: 0, y: 0 });
   const target = useMotionValue(50);
   const position = useSpring(target, {
     stiffness: 180,
@@ -22,39 +24,50 @@ export function BeforeAfter() {
   const clip = useTransform(position, (v) => `inset(0 ${100 - v}% 0 0)`);
   const left = useTransform(position, (v) => `${v}%`);
 
+  const setFromClientX = (clientX: number) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const pct = ((clientX - rect.left) / rect.width) * 100;
+    const now = performance.now();
+    const dt = Math.max(1, now - lastT.current);
+    velocity.current = ((clientX - lastX.current) / dt) * 16;
+    lastX.current = clientX;
+    lastT.current = now;
+    target.set(Math.min(92, Math.max(8, pct)));
+  };
+
+  const endDrag = () => {
+    if (!dragging.current) return;
+    dragging.current = false;
+    axisLock.current = null;
+    const current = target.get();
+    const inertia = Math.max(-8, Math.min(8, velocity.current * 0.9));
+    const bounced = Math.min(92, Math.max(8, current + inertia));
+    target.set(bounced);
+    requestAnimationFrame(() => {
+      const overshoot = inertia * 0.25;
+      target.set(Math.min(92, Math.max(8, bounced - overshoot)));
+    });
+  };
+
   useEffect(() => {
     const onPointerMove = (e: PointerEvent) => {
-      if (!dragging || !containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const pct = ((e.clientX - rect.left) / rect.width) * 100;
-      const now = performance.now();
-      const dt = Math.max(1, now - lastT.current);
-      velocity.current = ((e.clientX - lastX.current) / dt) * 16;
-      lastX.current = e.clientX;
-      lastT.current = now;
-      target.set(Math.min(92, Math.max(8, pct)));
+      if (!dragging.current) return;
+      if (e.pointerType === "touch" && axisLock.current !== "x") return;
+      setFromClientX(e.clientX);
     };
 
-    const onPointerUp = () => {
-      if (!dragging) return;
-      setDragging(false);
-      const current = target.get();
-      const inertia = Math.max(-8, Math.min(8, velocity.current * 0.9));
-      const bounced = Math.min(92, Math.max(8, current + inertia));
-      target.set(bounced);
-      requestAnimationFrame(() => {
-        const overshoot = inertia * 0.25;
-        target.set(Math.min(92, Math.max(8, bounced - overshoot)));
-      });
-    };
+    const onPointerUp = () => endDrag();
 
     window.addEventListener("pointermove", onPointerMove);
     window.addEventListener("pointerup", onPointerUp);
+    window.addEventListener("pointercancel", onPointerUp);
     return () => {
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("pointerup", onPointerUp);
+      window.removeEventListener("pointercancel", onPointerUp);
     };
-  }, [dragging, target]);
+  }, [target]);
 
   return (
     <section id="before-after" className="bg-milk pb-20 pt-8 md:pb-28 md:pt-10">
@@ -75,14 +88,36 @@ export function BeforeAfter() {
         <FadeIn delay={0.1}>
           <div
             ref={containerRef}
-            className="relative aspect-[4/3] touch-none select-none overflow-hidden border border-brass/20 bg-walnut shadow-deep"
+            className="relative aspect-[4/3] touch-pan-y select-none overflow-hidden border border-brass/20 bg-walnut shadow-deep"
             onPointerDown={(e) => {
-              setDragging(true);
+              start.current = { x: e.clientX, y: e.clientY };
               lastX.current = e.clientX;
               lastT.current = performance.now();
-              const rect = e.currentTarget.getBoundingClientRect();
-              const pct = ((e.clientX - rect.left) / rect.width) * 100;
-              target.set(Math.min(92, Math.max(8, pct)));
+              axisLock.current = null;
+
+              if (e.pointerType !== "touch") {
+                dragging.current = true;
+                setFromClientX(e.clientX);
+                return;
+              }
+
+              // Touch: wait for axis lock in move so vertical page scroll still works
+              dragging.current = true;
+            }}
+            onPointerMove={(e) => {
+              if (!dragging.current || e.pointerType !== "touch") return;
+              if (axisLock.current === "y") return;
+
+              if (!axisLock.current) {
+                const dx = e.clientX - start.current.x;
+                const dy = e.clientY - start.current.y;
+                if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+                axisLock.current = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+                if (axisLock.current === "y") return;
+              }
+
+              e.preventDefault();
+              setFromClientX(e.clientX);
             }}
           >
             <Image

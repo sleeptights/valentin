@@ -3,6 +3,11 @@
 import { useEffect } from "react";
 import { useLenis } from "lenis/react";
 
+/** Shared lock so nested modals don't unlock body under each other */
+let lockCount = 0;
+let savedOverflow = "";
+let savedPadding = "";
+
 /** Блокирует скролл страницы без сдвига вёрстки при открытии модалки */
 export function useLockBodyScroll(locked: boolean) {
   const lenis = useLenis();
@@ -10,21 +15,26 @@ export function useLockBodyScroll(locked: boolean) {
   useEffect(() => {
     if (!locked) return;
 
-    const scrollbar = window.innerWidth - document.documentElement.clientWidth;
-    const prevOverflow = document.body.style.overflow;
-    const prevPadding = document.body.style.paddingRight;
-
-    document.body.style.overflow = "hidden";
-    if (scrollbar > 0) {
-      document.body.style.paddingRight = `${scrollbar}px`;
+    if (lockCount === 0) {
+      const scrollbar =
+        window.innerWidth - document.documentElement.clientWidth;
+      savedOverflow = document.body.style.overflow;
+      savedPadding = document.body.style.paddingRight;
+      document.body.style.overflow = "hidden";
+      if (scrollbar > 0) {
+        document.body.style.paddingRight = `${scrollbar}px`;
+      }
+      lenis?.stop();
     }
-
-    lenis?.stop();
+    lockCount += 1;
 
     return () => {
-      document.body.style.overflow = prevOverflow;
-      document.body.style.paddingRight = prevPadding;
-      lenis?.start();
+      lockCount = Math.max(0, lockCount - 1);
+      if (lockCount === 0) {
+        document.body.style.overflow = savedOverflow;
+        document.body.style.paddingRight = savedPadding;
+        lenis?.start();
+      }
     };
   }, [locked, lenis]);
 }

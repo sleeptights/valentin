@@ -11,7 +11,7 @@ import type { CatalogFilters, Category, GridMode, Material, Product } from "@/ty
 import { ProductCard } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { formatPrice, formatPriceFrom, softSpring } from "@/lib/utils";
+import { formatPrice, formatPriceFrom } from "@/lib/utils";
 import { productDescription, productFeatures } from "@/lib/productCopy";
 import { useCart } from "@/context/CartContext";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
@@ -239,17 +239,17 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
               type="button"
               aria-label="Закрыть фильтры"
               className="fixed inset-0 z-[60] bg-graphite/30 backdrop-blur-[2px]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, pointerEvents: "none" }}
+              animate={{ opacity: 1, pointerEvents: "auto" }}
+              exit={{ opacity: 0, pointerEvents: "none" }}
               onClick={() => setFiltersOpen(false)}
             />
             <motion.aside
             className="fixed inset-y-0 left-0 z-[70] flex w-full max-w-none flex-col bg-milk shadow-soft sm:max-w-sm pt-[env(safe-area-inset-top)]"
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={softSpring}
+              initial={{ x: "-100%", pointerEvents: "none" }}
+              animate={{ x: 0, pointerEvents: "auto" }}
+              exit={{ x: "-100%", pointerEvents: "none" }}
+              transition={{ duration: 0.2 }}
               role="dialog"
               aria-modal="true"
               aria-label="Фильтры каталога"
@@ -268,7 +268,7 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
 
               <div
                 data-lenis-prevent
-                className="flex-1 space-y-8 overflow-y-auto px-6 py-6"
+                className="flex-1 touch-pan-y space-y-8 overflow-y-auto px-6 py-6 [-webkit-overflow-scrolling:touch]"
               >
                 <fieldset>
                   <legend className="mb-4 text-xs uppercase tracking-[0.16em] text-graphite/45">
@@ -342,10 +342,11 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
         {quickView && (
           <motion.div
             key="quick-view"
-            className="fixed inset-0 z-[80] flex items-end justify-center p-0 sm:p-4 md:items-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[95] flex items-end justify-center p-0 sm:p-4 md:items-center"
+            initial={{ opacity: 0, pointerEvents: "none" }}
+            animate={{ opacity: 1, pointerEvents: "auto" }}
+            exit={{ opacity: 0, pointerEvents: "none" }}
+            transition={{ duration: 0.16 }}
           >
             <button
               type="button"
@@ -358,11 +359,11 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
               aria-modal="true"
               aria-label={quickView.name}
               data-lenis-prevent
-              className="relative z-[1] max-h-[92dvh] w-full max-w-3xl overflow-y-auto overscroll-contain bg-milk p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-soft md:p-8"
+              className="relative z-[1] max-h-[92dvh] w-full max-w-3xl touch-pan-y overflow-y-auto overscroll-contain bg-milk p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-soft [-webkit-overflow-scrolling:touch] md:p-8"
               initial={{ y: 28 }}
               animate={{ y: 0 }}
-              exit={{ y: 16 }}
-              transition={softSpring}
+              exit={{ y: 12, opacity: 0 }}
+              transition={{ duration: 0.16 }}
             >
               <div className="grid gap-6 md:grid-cols-2">
                 <div

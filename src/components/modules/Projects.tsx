@@ -15,7 +15,10 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { CutCta } from "@/components/ui/CutCta";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 import { useSmoothScrollTo } from "@/hooks/useSmoothScrollTo";
-import { softSpring } from "@/lib/utils";
+
+const SWIPE_PX = 48;
+const TAP_SLOP_PX = 14;
+const EXIT_MS = 0.16;
 
 function PortfolioCard({
   collection,
@@ -32,7 +35,7 @@ function PortfolioCard({
   const total = collection.images.length;
   const current = collection.images[index];
   const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const swiped = useRef(false);
+  const suppressClick = useRef(false);
 
   const prev = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -49,24 +52,31 @@ function PortfolioCard({
       x: e.touches[0].clientX,
       y: e.touches[0].clientY,
     };
-    swiped.current = false;
+    suppressClick.current = false;
   };
 
   const onTouchEnd = (e: React.TouchEvent) => {
-    if (!touchStart.current || total <= 1) return;
+    if (!touchStart.current) return;
     const dx = e.changedTouches[0].clientX - touchStart.current.x;
     const dy = e.changedTouches[0].clientY - touchStart.current.y;
-    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-      swiped.current = true;
+    touchStart.current = null;
+
+    if (total > 1 && Math.abs(dx) > SWIPE_PX && Math.abs(dx) > Math.abs(dy)) {
+      suppressClick.current = true;
       if (dx < 0) setIndex((i) => (i + 1) % total);
       else setIndex((i) => (i - 1 + total) % total);
+      return;
     }
-    touchStart.current = null;
+
+    // Vertical/horizontal drag inside sheet — don't open lightbox
+    if (Math.abs(dx) > TAP_SLOP_PX || Math.abs(dy) > TAP_SLOP_PX) {
+      suppressClick.current = true;
+    }
   };
 
   const openLightbox = () => {
-    if (swiped.current) {
-      swiped.current = false;
+    if (suppressClick.current) {
+      suppressClick.current = false;
       return;
     }
     onOpenLightbox(current);
@@ -75,7 +85,7 @@ function PortfolioCard({
   return (
     <article className="flex flex-col overflow-hidden rounded-2xl bg-milk shadow-soft md:rounded-[1.25rem]">
       <div
-        className="group relative aspect-[4/3] bg-cashmere"
+        className="group relative aspect-[4/3] touch-pan-y bg-cashmere"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -111,7 +121,7 @@ function PortfolioCard({
             <button
               type="button"
               onClick={prev}
-              className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:h-8 md:w-8 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
+              className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:h-8 md:w-8 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
               aria-label="Предыдущий ракурс"
             >
               <ChevronLeft className="h-4 w-4" />
@@ -119,7 +129,7 @@ function PortfolioCard({
             <button
               type="button"
               onClick={next}
-              className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:h-8 md:w-8 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
+              className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:h-8 md:w-8 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
               aria-label="Следующий ракурс"
             >
               <ChevronRight className="h-4 w-4" />
@@ -173,7 +183,7 @@ function GroupShowcaseCard({
     group.showcase.length > 0 ? group.showcase : [group.cover];
   const [index, setIndex] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const swiped = useRef(false);
+  const suppressClick = useRef(false);
 
   const prev = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -190,24 +200,35 @@ function GroupShowcaseCard({
       x: e.touches[0].clientX,
       y: e.touches[0].clientY,
     };
-    swiped.current = false;
+    suppressClick.current = false;
   };
 
   const onTouchEnd = (e: React.TouchEvent) => {
     if (!touchStart.current) return;
     const dx = e.changedTouches[0].clientX - touchStart.current.x;
     const dy = e.changedTouches[0].clientY - touchStart.current.y;
-    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-      swiped.current = true;
+    touchStart.current = null;
+
+    if (
+      images.length > 1 &&
+      Math.abs(dx) > SWIPE_PX &&
+      Math.abs(dx) > Math.abs(dy)
+    ) {
+      suppressClick.current = true;
       if (dx < 0) setIndex((i) => (i + 1) % images.length);
       else setIndex((i) => (i - 1 + images.length) % images.length);
+      return;
     }
-    touchStart.current = null;
+
+    // Page scroll started on this tile — don't open category
+    if (Math.abs(dx) > TAP_SLOP_PX || Math.abs(dy) > TAP_SLOP_PX) {
+      suppressClick.current = true;
+    }
   };
 
   const handleOpen = () => {
-    if (swiped.current) {
-      swiped.current = false;
+    if (suppressClick.current) {
+      suppressClick.current = false;
       return;
     }
     onOpen();
@@ -225,7 +246,7 @@ function GroupShowcaseCard({
       }}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
-      className="group relative aspect-square cursor-pointer overflow-hidden rounded-2xl bg-walnut text-left shadow-soft md:rounded-[1.75rem]"
+      className="group relative aspect-square touch-pan-y cursor-pointer overflow-hidden rounded-2xl bg-walnut text-left shadow-soft md:rounded-[1.75rem]"
       aria-label={`${group.title}: ракурс ${index + 1} из ${images.length}. Открыть проекты`}
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -254,7 +275,7 @@ function GroupShowcaseCard({
           <button
             type="button"
             onClick={prev}
-            className="absolute left-1.5 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:left-2 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
+            className="absolute left-1.5 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:left-2 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
             aria-label="Предыдущий ракурс"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -262,7 +283,7 @@ function GroupShowcaseCard({
           <button
             type="button"
             onClick={next}
-            className="absolute right-1.5 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:right-2 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
+            className="absolute right-1.5 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:right-2 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
             aria-label="Следующий ракурс"
           >
             <ChevronRight className="h-4 w-4" />
@@ -294,6 +315,8 @@ export function Projects() {
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const scrollTo = useSmoothScrollTo();
+  /** Blocks ghost taps that reopen the previous section's photo after close */
+  const ignoreLightboxUntil = useRef(0);
 
   useEffect(() => setMounted(true), []);
 
@@ -304,21 +327,41 @@ export function Projects() {
 
   useLockBodyScroll(Boolean(open) || Boolean(lightbox));
 
-  useEffect(() => {
-    if (!open && !lightbox) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
-      if (lightbox) setLightbox(null);
-      else setOpen(null);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, lightbox]);
+  const armGhostGuard = () => {
+    ignoreLightboxUntil.current = Date.now() + 420;
+  };
+
+  const closeLightbox = () => {
+    setLightbox(null);
+    armGhostGuard();
+  };
 
   const closeAll = () => {
     setLightbox(null);
     setOpen(null);
+    armGhostGuard();
   };
+
+  const openGroup = (group: ProjectGroup) => {
+    setLightbox(null);
+    setOpen(group);
+  };
+
+  const openLightbox = (src: string) => {
+    if (Date.now() < ignoreLightboxUntil.current) return;
+    setLightbox(src);
+  };
+
+  useEffect(() => {
+    if (!open && !lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      if (lightbox) closeLightbox();
+      else closeAll();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, lightbox]);
 
   const overlays =
     mounted &&
@@ -327,12 +370,12 @@ export function Projects() {
         <AnimatePresence>
           {open ? (
             <motion.div
-              key="projects-modal"
-              className="fixed inset-0 z-[80] flex items-end justify-center sm:items-center sm:p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.18 }}
+              key={`projects-modal-${open.id}`}
+              className="fixed inset-0 z-[95] flex items-end justify-center sm:items-center sm:p-4"
+              initial={{ opacity: 0, pointerEvents: "none" }}
+              animate={{ opacity: 1, pointerEvents: "auto" }}
+              exit={{ opacity: 0, pointerEvents: "none" }}
+              transition={{ duration: EXIT_MS }}
             >
               <button
                 type="button"
@@ -345,10 +388,10 @@ export function Projects() {
                 aria-modal="true"
                 aria-label={open.title}
                 className="relative z-[1] flex h-[100dvh] w-full max-w-4xl flex-col overflow-hidden bg-cashmere shadow-deep sm:h-auto sm:max-h-[min(92vh,48rem)]"
-                initial={{ y: 20, scale: 0.98 }}
-                animate={{ y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={softSpring}
+                initial={{ y: 20, opacity: 0.98 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 12, opacity: 0 }}
+                transition={{ duration: EXIT_MS }}
               >
                 <div className="flex shrink-0 items-center justify-between border-b border-brass/20 bg-milk px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-5 sm:py-4 md:px-6">
                   <h3 className="font-serif text-2xl text-graphite md:text-3xl">
@@ -356,7 +399,7 @@ export function Projects() {
                   </h3>
                   <button
                     type="button"
-                    className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-cashmere"
+                    className="flex h-11 w-11 items-center justify-center rounded-full hover:bg-cashmere"
                     onClick={closeAll}
                     aria-label="Закрыть окно"
                   >
@@ -366,7 +409,7 @@ export function Projects() {
 
                 <div
                   data-lenis-prevent
-                  className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:p-6"
+                  className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain p-4 pb-[max(1rem,env(safe-area-inset-bottom))] [-webkit-overflow-scrolling:touch] md:p-6"
                 >
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {open.collections.map((collection) => (
@@ -374,7 +417,7 @@ export function Projects() {
                         key={collection.id}
                         collection={collection}
                         categoryTitle={open.title}
-                        onOpenLightbox={setLightbox}
+                        onOpenLightbox={openLightbox}
                         onRequest={() => {
                           closeAll();
                           window.setTimeout(() => scrollTo("contacts"), 80);
@@ -393,17 +436,17 @@ export function Projects() {
             <motion.div
               key="projects-lightbox"
               className="fixed inset-0 z-[100] flex items-center justify-center bg-graphite/85 p-3 sm:p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.15 }}
-              onClick={() => setLightbox(null)}
+              initial={{ opacity: 0, pointerEvents: "none" }}
+              animate={{ opacity: 1, pointerEvents: "auto" }}
+              exit={{ opacity: 0, pointerEvents: "none" }}
+              transition={{ duration: EXIT_MS }}
+              onClick={closeLightbox}
             >
               <button
                 type="button"
                 className="absolute right-3 top-[max(0.75rem,env(safe-area-inset-top))] flex h-11 w-11 items-center justify-center rounded-full bg-milk/10 text-milk hover:bg-milk/20 sm:right-4 sm:top-4"
                 aria-label="Закрыть фото"
-                onClick={() => setLightbox(null)}
+                onClick={closeLightbox}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -412,7 +455,7 @@ export function Projects() {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
-                transition={softSpring}
+                transition={{ duration: EXIT_MS }}
                 onClick={(e) => e.stopPropagation()}
               >
                 <Image
@@ -453,7 +496,7 @@ export function Projects() {
               <GroupShowcaseCard
                 key={group.id}
                 group={group}
-                onOpen={() => setOpen(group)}
+                onOpen={() => openGroup(group)}
               />
             ))}
           </div>

@@ -414,7 +414,7 @@ export function Header() {
               </button>
             </div>
             <nav
-              className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto px-4 pt-6 sm:px-5"
+              className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto touch-pan-y px-4 pt-6 [-webkit-overflow-scrolling:touch] sm:px-5"
               aria-label="Мобильная"
             >
               {nav.map((item) => (

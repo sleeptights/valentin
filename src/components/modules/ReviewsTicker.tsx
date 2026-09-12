@@ -77,7 +77,7 @@ export function ReviewsTicker() {
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-cashmere to-transparent md:w-16" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-cashmere to-transparent md:w-16" />
         <div
-          className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-5 py-1 pb-3 [-ms-overflow-style:none] [scrollbar-width:none] touch-pan-x md:gap-5 md:px-8 [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-5 py-1 pb-3 [-ms-overflow-style:none] [scrollbar-width:none] touch-pan-x touch-pan-y md:gap-5 md:px-8 [&::-webkit-scrollbar]:hidden"
           role="list"
           aria-label="Отзывы клиентов"
         >

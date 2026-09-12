@@ -164,7 +164,10 @@ export function SideCart() {
               </p>
             </div>
 
-            <div data-lenis-prevent className="flex-1 overflow-y-auto px-6 py-5">
+            <div
+              data-lenis-prevent
+              className="flex-1 touch-pan-y overflow-y-auto px-6 py-5 [-webkit-overflow-scrolling:touch]"
+            >
               {sent ? (
                 <div className="py-10 text-center">
                   <p className="font-serif text-2xl text-graphite">Заявка отправлена</p>
