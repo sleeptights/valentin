@@ -57,25 +57,25 @@ export function Footer() {
             Навигация
           </p>
           <div className="flex flex-col gap-2">
-            <Link href="/#projects" className="hover:text-milk">
+            <Link href="/#projects" className="text-milk/70 transition-colors hover:text-milk">
               Наши проекты
             </Link>
-            <Link href="/#stages" className="hover:text-milk">
+            <Link href="/#stages" className="text-milk/70 transition-colors hover:text-milk">
               Этапы работы
             </Link>
-            <Link href="/catalog" className="hover:text-milk">
+            <Link href="/catalog" className="text-milk/70 transition-colors hover:text-milk">
               Каталог
             </Link>
-            <Link href="/#before-after" className="hover:text-milk">
+            <Link href="/#before-after" className="text-milk/70 transition-colors hover:text-milk">
               Пространство
             </Link>
-            <Link href="/#reviews" className="hover:text-milk">
+            <Link href="/#reviews" className="text-milk/70 transition-colors hover:text-milk">
               Отзывы
             </Link>
-            <Link href="/#contacts" className="hover:text-milk">
+            <Link href="/#contacts" className="text-milk/70 transition-colors hover:text-milk">
               Контакты
             </Link>
-            <Link href="/privacy" className="hover:text-milk">
+            <Link href="/privacy" className="text-milk/70 transition-colors hover:text-milk">
               Политика конфиденциальности
             </Link>
           </div>

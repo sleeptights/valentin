@@ -6,8 +6,9 @@ export function formatPrice(value: number): string {
   }).format(value);
 }
 
-export function formatPriceFrom(value: number): string {
-  return `от ${formatPrice(value)}`;
+/** Все витринные цены — договорные; число в данных не показываем. */
+export function formatPriceFrom(_value?: number): string {
+  return "цена договорная";
 }
 
 export const spring = {

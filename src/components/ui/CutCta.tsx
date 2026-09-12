@@ -35,7 +35,7 @@ export function CutCta({
       />
       <span
         className={cn(
-          "relative flex flex-1 items-center px-6 py-3.5 text-[13px] font-medium uppercase tracking-[0.18em] sm:px-7",
+          "relative flex flex-1 items-center px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.2em] sm:px-7 sm:text-[13px] sm:tracking-[0.18em]",
           align === "start" ? "justify-start text-left" : "justify-center"
         )}
       >
@@ -48,7 +48,7 @@ export function CutCta({
   );
 
   const classNameFull = cn(
-    "group relative inline-flex min-h-12 w-full items-stretch overflow-hidden text-milk focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass/40 focus-visible:ring-offset-2",
+    "group relative inline-flex min-h-12 w-full items-stretch overflow-hidden text-milk transition-[filter,transform] duration-300 ease-premium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass/40 focus-visible:ring-offset-2 focus-visible:ring-offset-cashmere active:brightness-[0.97]",
     className
   );
 

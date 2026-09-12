@@ -162,11 +162,11 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
               <SlidersHorizontal className="h-4 w-4" />
               Фильтры
             </Button>
-            <div className="inline-flex border border-brass/25 p-1">
+            <div className="inline-flex rounded-full border border-brass/25 p-1">
               <button
                 type="button"
                 onClick={() => setGrid("large")}
-                className={`flex h-11 w-11 items-center justify-center transition-colors ${
+                className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-300 ease-premium ${
                   grid === "large"
                     ? "bg-graphite text-milk"
                     : "hover:bg-milk"
@@ -179,7 +179,7 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
               <button
                 type="button"
                 onClick={() => setGrid("compact")}
-                className={`flex h-11 w-11 items-center justify-center transition-colors ${
+                className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-300 ease-premium ${
                   grid === "compact"
                     ? "bg-graphite text-milk"
                     : "hover:bg-milk"
@@ -201,7 +201,7 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
                 key={c}
                 type="button"
                 onClick={() => toggleCategory(c)}
-                className={`px-4 py-2.5 text-sm transition-all duration-300 ${
+                className={`rounded-full px-4 py-2.5 text-sm transition-all duration-300 ease-premium ${
                   on
                     ? "bg-wood text-milk shadow-brass"
                     : "border border-brass/25 bg-milk text-graphite/70 shadow-soft hover:border-brass/50 hover:shadow-lift"
@@ -245,11 +245,11 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
               onClick={() => setFiltersOpen(false)}
             />
             <motion.aside
-            className="fixed inset-y-0 left-0 z-[70] flex w-full max-w-none flex-col bg-milk shadow-soft sm:max-w-sm pt-[env(safe-area-inset-top)]"
+            className="fixed inset-y-0 left-0 z-[70] flex w-full max-w-none flex-col bg-milk shadow-deep sm:max-w-sm pt-[env(safe-area-inset-top)]"
               initial={{ x: "-100%", pointerEvents: "none" }}
               animate={{ x: 0, pointerEvents: "auto" }}
               exit={{ x: "-100%", pointerEvents: "none" }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
               role="dialog"
               aria-modal="true"
               aria-label="Фильтры каталога"
@@ -302,7 +302,7 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
                           key={m}
                           type="button"
                           onClick={() => toggleMaterial(m)}
-                          className={`px-4 py-2.5 text-sm capitalize transition-colors ${
+                          className={`rounded-full px-4 py-2.5 text-sm capitalize transition-colors duration-300 ease-premium ${
                             on
                               ? "bg-wood text-milk"
                               : "bg-cashmere text-graphite hover:bg-cashmere/80"
@@ -346,11 +346,11 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
             initial={{ opacity: 0, pointerEvents: "none" }}
             animate={{ opacity: 1, pointerEvents: "auto" }}
             exit={{ opacity: 0, pointerEvents: "none" }}
-            transition={{ duration: 0.16 }}
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
           >
             <button
               type="button"
-              className="absolute inset-0 bg-graphite/40 backdrop-blur-sm"
+              className="absolute inset-0 bg-graphite/40 backdrop-blur-[2px]"
               onClick={() => setQuickView(null)}
               aria-label="Закрыть быстрый просмотр"
             />
@@ -359,11 +359,11 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
               aria-modal="true"
               aria-label={quickView.name}
               data-lenis-prevent
-              className="relative z-[1] max-h-[92dvh] w-full max-w-3xl touch-pan-y overflow-y-auto overscroll-contain bg-milk p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-soft [-webkit-overflow-scrolling:touch] md:p-8"
+              className="relative z-[1] max-h-[92dvh] w-full max-w-3xl touch-pan-y overflow-y-auto overscroll-contain rounded-t-[1.5rem] bg-milk p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-deep [-webkit-overflow-scrolling:touch] md:rounded-[1.5rem] md:p-8"
               initial={{ y: 28 }}
               animate={{ y: 0 }}
               exit={{ y: 12, opacity: 0 }}
-              transition={{ duration: 0.16 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="grid gap-6 md:grid-cols-2">
                 <div
@@ -396,10 +396,7 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
                     </button>
                   </div>
                   <p className="mt-2 font-medium text-brass">
-                    {formatPriceFrom(quickView.priceFrom)}
-                  </p>
-                  <p className="mt-1 text-sm text-graphite/55">
-                    {quickView.materials.join(" · ")}
+                    {formatPriceFrom()}
                   </p>
                   <p className="mt-5 text-sm leading-relaxed text-graphite/65">
                     {productDescription(quickView)}
@@ -415,6 +412,7 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
                   <div className="mt-8 flex flex-col gap-2 sm:flex-row">
                     <Button
                       fullWidth
+                      magnetic={false}
                       onClick={() => {
                         addItem(quickView);
                         setQuickView(null);
@@ -424,8 +422,8 @@ export function Catalog({ standalone = false }: { standalone?: boolean }) {
                     </Button>
                     <Link
                       href={`/catalog/${quickView.id}`}
-                      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-brass/40 px-5 text-sm text-graphite transition hover:border-brass hover:bg-milk/60"
                       onClick={() => setQuickView(null)}
+                      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-brass/40 px-6 text-sm font-medium tracking-[0.04em] text-graphite shadow-soft transition-[color,background-color,border-color,box-shadow] duration-300 ease-premium hover:border-brass hover:bg-milk/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass/20 focus-visible:ring-offset-2 focus-visible:ring-offset-cashmere"
                     >
                       Страница товара
                     </Link>

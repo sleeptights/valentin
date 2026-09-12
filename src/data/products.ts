@@ -1112,8 +1112,10 @@ export const kitchenCollections: KitchenCollection[] = [
 ];
 
 export const siteImages = {
-  /** Hero: полный кадр кухни, все ящики в кадре */
+  /** Hero desktop: полный landscape-кадр кухни */
   hero: img("hero-kitchen-fill-2k.jpg"),
+  /** Hero mobile: портретный кроп острова, камня и латуни */
+  heroMobile: img("hero-kitchen-mobile-2k.jpg"),
   /** До: кухня до установки (выровнено под слайдер) */
   before: img("before-furnishing-v6.jpg"),
   /** После: готовая кухня (выровнено под слайдер) */

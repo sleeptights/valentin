@@ -44,16 +44,16 @@ const stages = [
 
 export function WorkStages() {
   return (
-    <section id="stages" className="bg-milk py-14 md:py-20">
+    <section id="stages" className="bg-milk py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <FadeIn className="mb-10 text-center md:mb-14">
+        <FadeIn className="mb-10 md:mb-14">
           <p className="mb-3 text-xs uppercase tracking-[0.22em] text-brass">
             Как мы работаем
           </p>
-          <h2 className="font-serif text-[1.85rem] text-graphite md:text-5xl">
+          <h2 className="font-serif text-[1.85rem] tracking-tight text-graphite md:text-5xl">
             Этапы работы
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-graphite/55 md:text-base">
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-graphite/55 md:text-base">
             Путь от замера до установки — для кухонь и корпусной мебели; мягкую
             группу подбираем и заказываем в салоне.
           </p>
@@ -67,16 +67,16 @@ export function WorkStages() {
                   src={stage.image}
                   alt={stage.title}
                   fill
-                  className="object-cover transition-transform duration-700 ease-premium group-hover:scale-[1.04]"
+                  className="object-cover object-center transition-transform duration-700 ease-premium group-hover:scale-[1.03]"
                   sizes="(max-width:768px) 100vw, 50vw"
                   quality={88}
                 />
-                <div className="absolute inset-0 bg-graphite/45 transition-colors duration-500 group-hover:bg-graphite/55" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center md:px-10">
-                  <h3 className="font-serif text-xl uppercase tracking-[0.06em] text-milk md:text-3xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 via-graphite/25 to-graphite/10" />
+                <div className="absolute inset-0 flex flex-col items-start justify-end px-5 pb-5 text-left md:px-8 md:pb-8">
+                  <h3 className="font-serif text-2xl tracking-tight text-milk md:text-3xl">
                     {stage.title}
                   </h3>
-                  <p className="mt-2 max-w-md text-[0.8rem] leading-relaxed text-milk/85 md:mt-4 md:text-base">
+                  <p className="mt-2 max-w-md text-[0.85rem] leading-relaxed text-milk/80 md:mt-3 md:text-base">
                     {stage.text}
                   </p>
                 </div>

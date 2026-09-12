@@ -146,8 +146,8 @@ export function BeforeAfter() {
               className="absolute inset-y-0 z-10 w-[2px] bg-brass shadow-[0_0_18px_rgba(61,36,24,0.4)]"
               style={{ left }}
             >
-              <div className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-brass/60 bg-milk shadow-brass sm:h-14 sm:w-14">
-                <span className="text-[10px] uppercase tracking-[0.18em] text-walnut">
+              <div className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-brass/60 bg-milk shadow-brass sm:h-16 sm:w-16">
+                <span className="text-[11px] uppercase tracking-[0.18em] text-walnut">
                   ↔
                 </span>
               </div>

@@ -78,10 +78,7 @@ export default async function ProductPage({
               {product.name}
             </h1>
             <p className="mt-4 text-lg font-medium text-brass md:text-xl">
-              {formatPriceFrom(product.priceFrom)}
-            </p>
-            <p className="mt-2 text-sm text-graphite/50">
-              {product.materials.join(" · ")}
+              {formatPriceFrom()}
             </p>
             <p className="mt-6 text-sm leading-relaxed text-graphite/75 md:text-[15px]">
               {description}

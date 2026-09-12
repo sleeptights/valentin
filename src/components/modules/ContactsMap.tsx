@@ -21,8 +21,9 @@ import {
   SALON_STREET,
 } from "@/data/salon";
 import { salonStatus } from "@/lib/salonHours";
-import { softSpring } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+
+const easePremium = [0.22, 1, 0.36, 1] as const;
 
 export function ContactsMap() {
   const [open, setOpen] = useState(true);
@@ -35,10 +36,13 @@ export function ContactsMap() {
   }, []);
 
   return (
-    <section id="contacts" className="bg-cashmere pb-16 pt-10 md:pb-20 md:pt-12">
+    <section id="contacts" className="bg-cashmere pb-16 pt-14 md:pb-24 md:pt-16">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 md:grid-cols-2 md:gap-10 md:px-8">
         <FadeIn>
-          <h2 className="font-serif text-[1.85rem] text-graphite md:text-5xl">
+          <p className="mb-3 text-xs uppercase tracking-[0.22em] text-brass">
+            Салон
+          </p>
+          <h2 className="font-serif text-[1.85rem] tracking-tight text-graphite md:text-5xl">
             Контакты
           </h2>
 
@@ -63,7 +67,7 @@ export function ContactsMap() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={softSpring}
+                  transition={{ duration: 0.28, ease: easePremium }}
                   className="overflow-hidden border-t border-brass/15 bg-cashmere/50"
                 >
                   <div className="space-y-4 px-5 py-5">
@@ -126,7 +130,7 @@ export function ContactsMap() {
         </FadeIn>
 
         <FadeIn delay={0.08}>
-          <div className="relative min-h-[16rem] overflow-hidden border border-brass/20 bg-walnut shadow-soft aspect-[4/3] md:aspect-auto md:min-h-[22rem] md:h-full">
+          <div className="relative min-h-[14rem] overflow-hidden rounded-[1.35rem] border border-brass/20 bg-walnut shadow-soft aspect-[4/3] md:aspect-auto md:min-h-[22rem] md:h-full">
             <YandexMapLabel className="absolute inset-0 h-full w-full" />
           </div>
         </FadeIn>

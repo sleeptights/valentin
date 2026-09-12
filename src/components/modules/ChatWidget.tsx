@@ -47,7 +47,7 @@ export function ChatWidget() {
   return (
     <div
       ref={rootRef}
-      className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-4 z-[65] flex flex-col items-end sm:right-6"
+      className="pointer-events-none fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-4 z-[65] flex flex-col items-end sm:right-6"
     >
       <div
         role="dialog"
@@ -138,7 +138,7 @@ export function ChatWidget() {
           setHint(false);
           setOpen((value) => !value);
         }}
-        className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-wood text-milk shadow-[0_16px_40px_rgba(40,24,16,0.28)] transition-transform duration-300 ease-premium hover:-translate-y-0.5"
+        className="pointer-events-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-wood text-milk shadow-[0_16px_40px_rgba(40,24,16,0.28)] transition-transform duration-300 ease-premium hover:-translate-y-0.5"
         aria-label={open ? "Закрыть" : "Связаться с салоном"}
         aria-expanded={open}
       >

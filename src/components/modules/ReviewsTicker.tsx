@@ -48,7 +48,7 @@ export function ReviewsTicker() {
   return (
     <section
       id="reviews"
-      className="overflow-hidden bg-cashmere py-10 md:py-12"
+      className="overflow-hidden bg-cashmere py-14 md:py-20"
       aria-labelledby="reviews-heading"
     >
       <div className="mx-auto mb-7 flex max-w-5xl flex-col gap-2 px-5 md:mb-8 md:flex-row md:items-end md:justify-between md:px-8">

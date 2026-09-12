@@ -5,20 +5,28 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Minus, Plus, Trash2, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { products } from "@/data/products";
-import {
-  formatPrice,
-  formatPriceFrom,
-  softSpring,
-  vipDeliveryThreshold,
-} from "@/lib/utils";
+import { formatPriceFrom } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { ConsentCheckbox } from "@/components/ui/ConsentCheckbox";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 
+const easePremium = [0.22, 1, 0.36, 1] as const;
+
+const cartExtras = [
+  {
+    id: "assembly",
+    title: "Сборка",
+    price: "10% от стоимости заказа",
+  },
+  {
+    id: "floor-carry",
+    title: "Занос на этаж",
+    price: "1500 рублей",
+  },
+] as const;
+
 export function SideCart() {
-  const { items, isOpen, closeCart, removeItem, updateQuantity, total, addItem } =
-    useCart();
+  const { items, isOpen, closeCart, removeItem, updateQuantity } = useCart();
 
   const [checkout, setCheckout] = useState(false);
   const [name, setName] = useState("");
@@ -30,11 +38,6 @@ export function SideCart() {
   const [sent, setSent] = useState(false);
 
   useLockBodyScroll(isOpen);
-
-  const remaining = Math.max(0, vipDeliveryThreshold - total);
-  const progress = Math.min(100, (total / vipDeliveryThreshold) * 100);
-  const cartIds = new Set(items.map((i) => i.product.id));
-  const upsell = products.filter((p) => !cartIds.has(p.id)).slice(0, 2);
 
   const resetForm = () => {
     setCheckout(false);
@@ -60,12 +63,12 @@ export function SideCart() {
 
     const lines = items.map(
       ({ product, quantity }) =>
-        `${product.name} × ${quantity} (${formatPriceFrom(product.priceFrom)})`,
+        `${product.name} × ${quantity} (${formatPriceFrom()})`,
     );
     const message =
       note.trim().length >= 5
         ? note.trim()
-        : `Заявка на консультацию по подборке.\n${lines.join("\n")}\nИтого от ${formatPrice(total)}.`;
+        : `Заявка на консультацию по подборке.\n${lines.join("\n")}\nИтого: ${formatPriceFrom()}.`;
 
     try {
       const res = await fetch("/api/contact", {
@@ -124,11 +127,11 @@ export function SideCart() {
             role="dialog"
             aria-modal="true"
             aria-label="Заявка"
-            className="fixed inset-y-0 right-0 z-[70] flex h-[100dvh] w-full max-w-md flex-col bg-milk shadow-soft pt-[env(safe-area-inset-top)]"
+            className="fixed inset-y-0 right-0 z-[70] flex h-[100dvh] w-full max-w-md flex-col bg-milk shadow-deep pt-[env(safe-area-inset-top)]"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={softSpring}
+            transition={{ duration: 0.32, ease: easePremium }}
           >
             <div className="flex items-center justify-between border-b border-brass/20 px-6 py-5">
               <h2 className="font-serif text-2xl text-graphite">Заявка</h2>
@@ -140,28 +143,6 @@ export function SideCart() {
               >
                 <X className="h-5 w-5" />
               </button>
-            </div>
-
-            <div className="border-b border-brass/20 px-6 py-5">
-              <div className="mb-2 flex items-center justify-between text-sm">
-                <span className="text-graphite/60">VIP-доставка и сборка</span>
-                <span className="font-medium text-graphite">
-                  {remaining === 0 ? "В подарок" : `ещё ${formatPrice(remaining)}`}
-                </span>
-              </div>
-              <div className="h-1.5 overflow-hidden rounded-full bg-cashmere shadow-insetSoft">
-                <motion.div
-                  className="h-full rounded-full bg-gradient-to-r from-brass-soft to-brass shadow-[0_0_12px_rgba(61,36,24,0.35)]"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${progress}%` }}
-                  transition={softSpring}
-                />
-              </div>
-              <p className="mt-2 text-xs text-graphite/50">
-                {remaining === 0
-                  ? "VIP-доставка и сборка — в подарок к заказу"
-                  : "При заказе от порога — VIP-доставка и сборка в подарок"}
-              </p>
             </div>
 
             <div
@@ -211,7 +192,7 @@ export function SideCart() {
                           </button>
                         </div>
                         <p className="mt-1 text-sm text-graphite/60">
-                          {formatPriceFrom(product.priceFrom)}
+                          {formatPriceFrom()}
                         </p>
                         <div className="mt-3 inline-flex items-center gap-1 rounded-full border border-brass/25 p-1">
                           <button
@@ -238,40 +219,25 @@ export function SideCart() {
                 </ul>
               )}
 
-              {!sent && upsell.length > 0 && (
+              {!sent && items.length > 0 && (
                 <div className="mt-8">
                   <h3 className="mb-4 text-xs uppercase tracking-[0.18em] text-graphite/45">
                     Вам подойдёт
                   </h3>
                   <div className="space-y-3">
-                    {upsell.map((product) => (
+                    {cartExtras.map((extra) => (
                       <div
-                        key={product.id}
-                        className="flex items-center gap-3 bg-cashmere/80 p-3"
+                        key={extra.id}
+                        className="flex items-center gap-3 rounded-2xl bg-cashmere/80 px-4 py-3.5"
                       >
-                        <div className="relative h-14 w-12 overflow-hidden bg-milk">
-                          <Image
-                            src={product.images[0]}
-                            alt={product.name}
-                            fill
-                            className="object-contain"
-                            sizes="48px"
-                          />
-                        </div>
                         <div className="min-w-0 flex-1">
-                          <p className="truncate text-sm font-medium">{product.name}</p>
-                          <p className="text-xs text-graphite/55">
-                            {formatPriceFrom(product.priceFrom)}
+                          <p className="text-sm font-medium text-graphite">
+                            {extra.title}
+                          </p>
+                          <p className="mt-0.5 text-xs text-graphite/55">
+                            {extra.price}
                           </p>
                         </div>
-                        <Button
-                          variant="outline"
-                          className="!px-3 !py-2 text-xs"
-                          magnetic={false}
-                          onClick={() => addItem(product)}
-                        >
-                          Добавить
-                        </Button>
                       </div>
                     ))}
                   </div>
@@ -289,7 +255,7 @@ export function SideCart() {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full border border-brass/20 bg-milk px-3 py-2.5 text-graphite outline-none focus:border-brass/50"
+                      className="w-full rounded-2xl border border-brass/20 bg-milk px-4 py-3 text-base text-graphite outline-none transition-colors focus:border-brass/50 focus-visible:ring-2 focus-visible:ring-brass/20"
                       autoComplete="name"
                     />
                   </label>
@@ -303,7 +269,7 @@ export function SideCart() {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+7…"
-                      className="w-full border border-brass/20 bg-milk px-3 py-2.5 text-graphite outline-none focus:border-brass/50"
+                      className="w-full rounded-2xl border border-brass/20 bg-milk px-4 py-3 text-base text-graphite outline-none transition-colors focus:border-brass/50 focus-visible:ring-2 focus-visible:ring-brass/20"
                       autoComplete="tel"
                     />
                   </label>
@@ -316,7 +282,7 @@ export function SideCart() {
                       onChange={(e) => setNote(e.target.value)}
                       rows={3}
                       placeholder="Когда удобно позвонить, размеры комнаты…"
-                      className="w-full resize-none border border-brass/20 bg-milk px-3 py-2.5 text-graphite outline-none focus:border-brass/50"
+                      className="w-full resize-none rounded-2xl border border-brass/20 bg-milk px-4 py-3 text-base text-graphite outline-none transition-colors focus:border-brass/50 focus-visible:ring-2 focus-visible:ring-brass/20"
                     />
                   </label>
                   <ConsentCheckbox
@@ -335,9 +301,11 @@ export function SideCart() {
 
             {!sent ? (
               <div className="border-t border-brass/20 px-6 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="text-sm text-graphite/55">Итого от</span>
-                  <span className="font-serif text-2xl">{formatPrice(total)}</span>
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <span className="text-sm text-graphite/55">Итого</span>
+                  <span className="font-serif text-xl text-graphite md:text-2xl">
+                    {formatPriceFrom()}
+                  </span>
                 </div>
                 {checkout ? (
                   <div className="flex gap-2">

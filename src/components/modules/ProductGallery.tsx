@@ -37,10 +37,14 @@ export function ProductGallery({
     go(dx < 0 ? 1 : -1);
   };
 
+  const isPng = src?.endsWith(".png");
+
   return (
     <div className="space-y-3">
       <div
-        className="relative aspect-[3/4] touch-pan-y overflow-hidden bg-cashmere shadow-soft"
+        className={`relative aspect-[3/4] touch-pan-y overflow-hidden shadow-soft ${
+          isPng ? "bg-cashmere" : "bg-milk"
+        }`}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -50,7 +54,11 @@ export function ProductGallery({
           alt={name}
           fill
           priority
-          className="object-cover object-center"
+          className={
+            isPng
+              ? "object-contain object-center p-6 md:p-10"
+              : "object-cover object-center"
+          }
           sizes="(max-width:768px) 100vw, 50vw"
           quality={90}
           draggable={false}
@@ -79,7 +87,9 @@ export function ProductGallery({
                 onClick={() => setActive(i)}
                 aria-label={`Фото ${i + 1}`}
                 aria-pressed={selected}
-                className={`relative aspect-square overflow-hidden bg-cashmere outline-none ring-offset-2 ring-offset-cashmere transition ${
+                className={`relative aspect-square overflow-hidden outline-none ring-offset-2 ring-offset-cashmere transition duration-300 ease-premium ${
+                  thumb.endsWith(".png") ? "bg-cashmere" : "bg-milk"
+                } ${
                   selected ? "ring-2 ring-brass" : "hover:ring-1 hover:ring-brass/40"
                 }`}
               >
@@ -87,7 +97,11 @@ export function ProductGallery({
                   src={thumb}
                   alt=""
                   fill
-                  className="object-cover"
+                  className={
+                    thumb.endsWith(".png")
+                      ? "object-contain object-center p-2"
+                      : "object-cover object-center"
+                  }
                   sizes="120px"
                 />
               </button>

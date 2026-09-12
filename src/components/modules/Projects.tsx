@@ -262,7 +262,7 @@ function GroupShowcaseCard({
             src={images[index]}
             alt={`${group.title} — ракурс ${index + 1}`}
             fill
-            className="object-cover transition-transform duration-700 ease-premium group-hover:scale-105"
+            className="object-cover object-center transition-transform duration-700 ease-premium md:group-hover:scale-[1.04]"
             sizes="(max-width:768px) 33vw, 280px"
             quality={95}
             priority={index === 0}
@@ -476,22 +476,22 @@ export function Projects() {
     );
 
   return (
-    <section id="projects" className="bg-cashmere pb-2 pt-14 md:pb-3 md:pt-16">
+    <section id="projects" className="bg-cashmere pb-4 pt-16 md:pb-6 md:pt-20">
       <div className="mx-auto max-w-5xl px-5 md:px-8">
         <FadeIn>
           <p className="mb-3 text-xs uppercase tracking-[0.22em] text-brass">
             Портфолио
           </p>
-          <h2 className="font-serif text-[1.85rem] text-graphite md:text-4xl">
+          <h2 className="font-serif text-[1.85rem] tracking-tight text-graphite md:text-4xl">
             Наши проекты
           </h2>
-          <p className="mt-3 max-w-lg text-sm text-graphite/55 md:text-base">
+          <p className="mt-3 max-w-lg text-sm leading-relaxed text-graphite/55 md:text-base">
             Выберите раздел — внутри подборка реализованных работ.
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.08} className="mt-8">
-          <div className="grid grid-cols-3 gap-3 md:gap-5">
+        <FadeIn delay={0.08} className="mt-8 md:mt-10">
+          <div className="grid grid-cols-3 gap-2.5 md:gap-5">
             {projectGroups.map((group) => (
               <GroupShowcaseCard
                 key={group.id}
