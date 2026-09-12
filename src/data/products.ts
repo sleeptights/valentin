@@ -937,7 +937,7 @@ export const products: Product[] = [
   },
   {
     "id": "prihozhaya-capitone-5011",
-    "name": "Прихожая Capitonné",
+    "name": "Прихожая Emerald Suite",
     "priceFrom": 168000,
     "materials": ["кашемир", "латунь"],
     "inStock": false,
@@ -947,7 +947,7 @@ export const products: Product[] = [
       "/images/catalog/5011/1.jpg?v=15",
       "/images/catalog/5011/2.jpg?v=15"
     ],
-    "description": "Прихожая Capitonné — прихожие салона Valentin от 168 000 ₽.",
+    "description": "Прихожая Emerald Suite — прихожие салона Valentin от 168 000 ₽.",
     "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
@@ -997,7 +997,7 @@ export const products: Product[] = [
   },
   {
     "id": "prihozhaya-emerald-suite-5015",
-    "name": "Прихожая Emerald Suite",
+    "name": "Прихожая Capitonné",
     "priceFrom": 189000,
     "materials": ["орех", "кожа"],
     "inStock": false,
@@ -1007,7 +1007,7 @@ export const products: Product[] = [
       "/images/catalog/5015/1.jpg?v=15",
       "/images/catalog/5015/2.jpg?v=15"
     ],
-    "description": "Прихожая Emerald Suite — прихожие салона Valentin от 189 000 ₽.",
+    "description": "Прихожая Capitonné — прихожие салона Valentin от 189 000 ₽.",
     "features": ["По индивидуальным размерам", "Под заказ"]
   },
   {
