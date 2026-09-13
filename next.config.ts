@@ -5,8 +5,9 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["nodemailer"],
   poweredByHeader: false,
   images: {
-    // AVIF from Next optimizer was undecodable in browsers for some portfolio assets
-    formats: ["image/webp"],
+    // Timeweb's image optimizer returns responses that Chrome cannot decode.
+    // All local assets are already compressed, so serve them directly.
+    unoptimized: true,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
