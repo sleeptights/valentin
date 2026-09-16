@@ -18,7 +18,7 @@ export interface ProjectGroup {
   collections: PortfolioCollection[];
 }
 
-export const PORTFOLIO_VERSION = "12";
+export const PORTFOLIO_VERSION = "13";
 
 export const projectGroups: ProjectGroup[] = [
   {
@@ -31,76 +31,6 @@ export const projectGroups: ProjectGroup[] = [
       "/images/portfolio/kitchens/showcase-03.jpg?v=12"
     ],
     "collections": [
-      {
-        "id": "kitchen-01",
-        "style": "классика",
-        "layout": "угловая с островом",
-        "images": [
-          "/images/portfolio/kitchens/kitchen-01/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-01/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-01/03.jpg?v=12"
-        ]
-      },
-      {
-        "id": "kitchen-02",
-        "style": "классика",
-        "layout": "угловая",
-        "images": [
-          "/images/portfolio/kitchens/kitchen-02/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-02/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-02/03.jpg?v=12"
-        ]
-      },
-      {
-        "id": "kitchen-03",
-        "style": "классика",
-        "layout": "прямая",
-        "images": [
-          "/images/portfolio/kitchens/kitchen-03/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-03/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-03/03.jpg?v=12"
-        ]
-      },
-      {
-        "id": "kitchen-04",
-        "style": "классика",
-        "layout": "угловая",
-        "images": [
-          "/images/portfolio/kitchens/kitchen-04/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-04/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-04/03.jpg?v=12"
-        ]
-      },
-      {
-        "id": "kitchen-05",
-        "style": "современный",
-        "layout": "прямая",
-        "images": [
-          "/images/portfolio/kitchens/kitchen-05/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-05/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-05/03.jpg?v=12"
-        ]
-      },
-      {
-        "id": "kitchen-06",
-        "style": "современный",
-        "layout": "П-образная с барной стойкой",
-        "images": [
-          "/images/portfolio/kitchens/kitchen-06/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-06/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-06/03.jpg?v=12"
-        ]
-      },
-      {
-        "id": "kitchen-07",
-        "style": "современный",
-        "layout": "прямая",
-        "images": [
-          "/images/portfolio/kitchens/kitchen-07/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-07/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-07/03.jpg?v=12"
-        ]
-      },
       {
         "id": "kitchen-08",
         "style": "современный",
@@ -119,6 +49,126 @@ export const projectGroups: ProjectGroup[] = [
           "/images/portfolio/kitchens/kitchen-09/01.jpg?v=12",
           "/images/portfolio/kitchens/kitchen-09/02.jpg?v=12",
           "/images/portfolio/kitchens/kitchen-09/03.jpg?v=12"
+        ]
+      },
+      {
+        "id": "kitchen-10",
+        "style": "классика",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-10/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-11",
+        "style": "классика",
+        "layout": "прямая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-11/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-12",
+        "style": "классика",
+        "layout": "П-образная с барной стойкой",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-12/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-13",
+        "style": "классика",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-13/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-14",
+        "style": "классика",
+        "layout": "прямая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-14/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-15",
+        "style": "современный",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-15/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-16",
+        "style": "современный",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-16/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-17",
+        "style": "классика",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-17/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-18",
+        "style": "классика",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-18/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-19",
+        "style": "классика",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-19/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-20",
+        "style": "современный",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-20/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-21",
+        "style": "современный",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-21/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-22",
+        "style": "лофт",
+        "layout": "П-образная с барной стойкой",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-22/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-23",
+        "style": "классика",
+        "layout": "прямая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-23/01.jpg?v=13"
+        ]
+      },
+      {
+        "id": "kitchen-24",
+        "style": "неоклассика",
+        "layout": "угловая",
+        "images": [
+          "/images/portfolio/kitchens/kitchen-24/01.jpg?v=13"
         ]
       }
     ]
