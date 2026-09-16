@@ -33,7 +33,7 @@ export const projectGroups: ProjectGroup[] = [
     "collections": [
       {
         "id": "kitchen-01",
-        "style": "неоклассика",
+        "style": "классика",
         "layout": "угловая с островом",
         "images": [
           "/images/portfolio/kitchens/kitchen-01/01.jpg?v=12",
@@ -43,7 +43,7 @@ export const projectGroups: ProjectGroup[] = [
       },
       {
         "id": "kitchen-02",
-        "style": "неоклассика",
+        "style": "классика",
         "layout": "угловая",
         "images": [
           "/images/portfolio/kitchens/kitchen-02/01.jpg?v=12",
@@ -53,7 +53,7 @@ export const projectGroups: ProjectGroup[] = [
       },
       {
         "id": "kitchen-03",
-        "style": "неоклассика",
+        "style": "классика",
         "layout": "прямая",
         "images": [
           "/images/portfolio/kitchens/kitchen-03/01.jpg?v=12",
@@ -63,7 +63,7 @@ export const projectGroups: ProjectGroup[] = [
       },
       {
         "id": "kitchen-04",
-        "style": "современный",
+        "style": "классика",
         "layout": "угловая",
         "images": [
           "/images/portfolio/kitchens/kitchen-04/01.jpg?v=12",
@@ -113,7 +113,7 @@ export const projectGroups: ProjectGroup[] = [
       },
       {
         "id": "kitchen-09",
-        "style": "неоклассика",
+        "style": "лофт",
         "layout": "с островом",
         "images": [
           "/images/portfolio/kitchens/kitchen-09/01.jpg?v=12",
