@@ -36,9 +36,9 @@ export const projectGroups: ProjectGroup[] = [
         "style": "современный",
         "layout": "угловая",
         "images": [
+          "/images/portfolio/kitchens/kitchen-08/03.jpg?v=12",
           "/images/portfolio/kitchens/kitchen-08/01.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-08/02.jpg?v=12",
-          "/images/portfolio/kitchens/kitchen-08/03.jpg?v=12"
+          "/images/portfolio/kitchens/kitchen-08/02.jpg?v=12"
         ]
       },
       {

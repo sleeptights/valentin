@@ -98,17 +98,31 @@ function PortfolioCard({
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={current}
-              className="absolute inset-0"
+              className="absolute inset-0 overflow-hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
+              {categoryTitle === "Кухни" ? (
+                <>
+                  <Image
+                    src={current}
+                    alt=""
+                    fill
+                    aria-hidden="true"
+                    className="scale-110 object-cover object-center opacity-35 blur-2xl"
+                    sizes="(max-width:768px) 100vw, 360px"
+                    quality={75}
+                  />
+                  <span className="absolute inset-0 bg-cashmere/20" />
+                </>
+              ) : null}
               <Image
                 src={current}
                 alt={`${categoryTitle} — ${collection.style}, ракурс ${index + 1}`}
                 fill
-                className="object-contain"
+                className="z-[1] object-contain object-center"
                 sizes="(max-width:768px) 100vw, 360px"
                 quality={95}
               />
