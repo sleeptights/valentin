@@ -18,7 +18,7 @@ export interface ProjectGroup {
   collections: PortfolioCollection[];
 }
 
-export const PORTFOLIO_VERSION = "14";
+export const PORTFOLIO_VERSION = "15";
 
 export const projectGroups: ProjectGroup[] = [
   {
@@ -420,8 +420,73 @@ export const projectGroups: ProjectGroup[] = [
   {
     "id": "home",
     "title": "Мебель для дома",
-    "cover": "",
-    "showcase": [],
-    "collections": []
+    "cover": "/images/catalog/5004/0.jpg?v=15",
+    "showcase": [
+      "/images/catalog/5004/0.jpg?v=15",
+      "/images/catalog/5006/0.jpg?v=15",
+      "/images/catalog/5007/0.jpg?v=15"
+    ],
+    "collections": [
+      {
+        "id": "home-01",
+        "style": "современный",
+        "layout": "модульная детская",
+        "images": [
+          "/images/catalog/5004/0.jpg?v=15",
+          "/images/catalog/5004/1.jpg?v=15",
+          "/images/catalog/5004/2.jpg?v=15"
+        ]
+      },
+      {
+        "id": "home-02",
+        "style": "современный",
+        "layout": "шкафная система",
+        "images": [
+          "/images/catalog/5006/0.jpg?v=15",
+          "/images/catalog/5006/1.jpg?v=15",
+          "/images/catalog/5006/2.jpg?v=15"
+        ]
+      },
+      {
+        "id": "home-03",
+        "style": "современный",
+        "layout": "подвесная композиция",
+        "images": [
+          "/images/catalog/5007/0.jpg?v=15",
+          "/images/catalog/5007/1.jpg?v=15",
+          "/images/catalog/5007/2.jpg?v=15"
+        ]
+      },
+      {
+        "id": "home-04",
+        "style": "современный",
+        "layout": "модульная стенка",
+        "images": [
+          "/images/catalog/5009/0.jpg?v=15",
+          "/images/catalog/5009/1.jpg?v=15",
+          "/images/catalog/5009/2.jpg?v=15"
+        ]
+      },
+      {
+        "id": "home-05",
+        "style": "современный",
+        "layout": "ТВ-зона",
+        "images": [
+          "/images/catalog/5012/0.jpg?v=15",
+          "/images/catalog/5012/1.jpg?v=15",
+          "/images/catalog/5012/2.jpg?v=15"
+        ]
+      },
+      {
+        "id": "home-06",
+        "style": "классика",
+        "layout": "модульная стенка",
+        "images": [
+          "/images/catalog/5017/0.jpg?v=15",
+          "/images/catalog/5017/1.jpg?v=15",
+          "/images/catalog/5017/2.jpg?v=15"
+        ]
+      }
+    ]
   }
 ];

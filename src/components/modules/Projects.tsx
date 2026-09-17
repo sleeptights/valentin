@@ -104,7 +104,7 @@ function PortfolioCard({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              {categoryTitle === "Кухни" ? (
+              {categoryTitle === "Кухни" || categoryTitle === "Мебель для дома" ? (
                 <>
                   <Image
                     src={current}
