@@ -18,7 +18,7 @@ export interface ProjectGroup {
   collections: PortfolioCollection[];
 }
 
-export const PORTFOLIO_VERSION = "15";
+export const PORTFOLIO_VERSION = "16";
 
 export const projectGroups: ProjectGroup[] = [
   {
@@ -420,9 +420,9 @@ export const projectGroups: ProjectGroup[] = [
   {
     "id": "home",
     "title": "Мебель для дома",
-    "cover": "/images/catalog/5004/0.jpg?v=15",
+    "cover": "/images/portfolio/home/cover.jpg?v=16",
     "showcase": [
-      "/images/catalog/5004/0.jpg?v=15",
+      "/images/portfolio/home/cover.jpg?v=16",
       "/images/catalog/5006/0.jpg?v=15",
       "/images/catalog/5007/0.jpg?v=15"
     ],
