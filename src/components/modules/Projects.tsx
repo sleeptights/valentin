@@ -265,7 +265,7 @@ function GroupShowcaseCard({
       }}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
-      className="group relative aspect-square touch-pan-y cursor-pointer overflow-hidden rounded-2xl bg-walnut text-left shadow-soft md:rounded-[1.75rem]"
+      className="group relative aspect-[4/3] touch-pan-y cursor-pointer overflow-hidden rounded-2xl bg-walnut text-left shadow-soft min-[360px]:aspect-square md:rounded-[1.75rem]"
       aria-label={
         currentImage
           ? `${group.title}: ракурс ${index + 1} из ${images.length}. Открыть проекты`
@@ -287,7 +287,7 @@ function GroupShowcaseCard({
               alt={`${group.title} — ракурс ${index + 1}`}
               fill
               className="object-cover object-center transition-transform duration-700 ease-premium md:group-hover:scale-[1.04]"
-              sizes="(max-width:768px) 50vw, 240px"
+              sizes="(max-width:359px) 100vw, (max-width:768px) 50vw, 240px"
               quality={95}
               priority={index === 0}
             />
@@ -306,7 +306,7 @@ function GroupShowcaseCard({
           <button
             type="button"
             onClick={prev}
-            className="absolute left-1.5 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:left-2 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
+            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
             aria-label="Предыдущий ракурс"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -314,7 +314,7 @@ function GroupShowcaseCard({
           <button
             type="button"
             onClick={next}
-            className="absolute right-1.5 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:right-2 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
+            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-graphite/55 text-milk opacity-100 md:h-9 md:w-9 md:opacity-0 md:transition-opacity md:group-hover:opacity-100"
             aria-label="Следующий ракурс"
           >
             <ChevronRight className="h-4 w-4" />
@@ -333,7 +333,7 @@ function GroupShowcaseCard({
       )}
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-graphite/70 via-graphite/15 to-transparent" />
-      <span className="absolute inset-x-0 bottom-0 z-10 p-2 font-serif text-[0.95rem] leading-tight text-milk sm:p-3 sm:text-lg md:p-5 md:text-2xl">
+      <span className="absolute inset-x-0 bottom-0 z-10 p-3 font-serif text-lg leading-tight text-milk min-[360px]:p-2 min-[360px]:text-[0.95rem] sm:p-3 sm:text-lg md:p-5 md:text-2xl">
         {group.title}
       </span>
     </div>
@@ -424,8 +424,8 @@ export function Projects() {
                 exit={{ y: 12, opacity: 0 }}
                 transition={{ duration: EXIT_MS }}
               >
-                <div className="flex shrink-0 items-center justify-between border-b border-brass/20 bg-milk px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-5 sm:py-4 md:px-6">
-                  <h3 className="font-serif text-2xl text-graphite md:text-3xl">
+                <div className="flex shrink-0 items-center justify-between border-b border-brass/20 bg-milk px-3 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] min-[360px]:px-4 sm:px-5 sm:py-4 md:px-6">
+                  <h3 className="font-serif text-xl text-graphite min-[360px]:text-2xl md:text-3xl">
                     {open.title}
                   </h3>
                   <button
@@ -440,7 +440,7 @@ export function Projects() {
 
                 <div
                   data-lenis-prevent
-                  className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain p-4 pb-[max(1rem,env(safe-area-inset-bottom))] [-webkit-overflow-scrolling:touch] md:p-6"
+                  className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] [-webkit-overflow-scrolling:touch] min-[360px]:p-4 min-[360px]:pb-[max(1rem,env(safe-area-inset-bottom))] md:p-6"
                 >
                   {open.collections.length > 0 ? (
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -514,7 +514,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="bg-cashmere pb-4 pt-16 md:pb-6 md:pt-20">
-      <div className="mx-auto max-w-5xl px-5 md:px-8">
+      <div className="mx-auto max-w-5xl px-4 min-[360px]:px-5 md:px-8">
         <FadeIn>
           <p className="mb-3 text-xs uppercase tracking-[0.22em] text-brass">
             Портфолио
@@ -528,7 +528,7 @@ export function Projects() {
         </FadeIn>
 
         <FadeIn delay={0.08} className="mt-8 md:mt-10">
-          <div className="grid grid-cols-2 gap-2.5 md:grid-cols-4 md:gap-5">
+          <div className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2.5 md:grid-cols-4 md:gap-5">
             {projectGroups.map((group) => (
               <GroupShowcaseCard
                 key={group.id}
