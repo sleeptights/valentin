@@ -194,8 +194,13 @@ function GroupShowcaseCard({
   onOpen: () => void;
 }) {
   const images =
-    group.showcase.length > 0 ? group.showcase : [group.cover];
+    group.showcase.length > 0
+      ? group.showcase
+      : group.cover
+        ? [group.cover]
+        : [];
   const [index, setIndex] = useState(0);
+  const currentImage = images[index];
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const suppressClick = useRef(false);
 
@@ -261,28 +266,40 @@ function GroupShowcaseCard({
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
       className="group relative aspect-square touch-pan-y cursor-pointer overflow-hidden rounded-2xl bg-walnut text-left shadow-soft md:rounded-[1.75rem]"
-      aria-label={`${group.title}: ракурс ${index + 1} из ${images.length}. Открыть проекты`}
+      aria-label={
+        currentImage
+          ? `${group.title}: ракурс ${index + 1} из ${images.length}. Открыть проекты`
+          : `${group.title}. Открыть раздел`
+      }
     >
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.div
-          key={images[index]}
-          className="absolute inset-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
-        >
-          <Image
-            src={images[index]}
-            alt={`${group.title} — ракурс ${index + 1}`}
-            fill
-            className="object-cover object-center transition-transform duration-700 ease-premium md:group-hover:scale-[1.04]"
-            sizes="(max-width:768px) 33vw, 280px"
-            quality={95}
-            priority={index === 0}
-          />
-        </motion.div>
-      </AnimatePresence>
+      {currentImage ? (
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={currentImage}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          >
+            <Image
+              src={currentImage}
+              alt={`${group.title} — ракурс ${index + 1}`}
+              fill
+              className="object-cover object-center transition-transform duration-700 ease-premium md:group-hover:scale-[1.04]"
+              sizes="(max-width:768px) 50vw, 240px"
+              quality={95}
+              priority={index === 0}
+            />
+          </motion.div>
+        </AnimatePresence>
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_30%_25%,rgba(193,163,98,0.38),transparent_45%),linear-gradient(145deg,#73503d,#2e211b)] px-4 text-center">
+          <span className="mb-8 text-xs uppercase tracking-[0.18em] text-milk/70 md:text-sm">
+            Фотографии скоро появятся
+          </span>
+        </div>
+      )}
 
       {images.length > 1 && (
         <>
@@ -425,20 +442,26 @@ export function Projects() {
                   data-lenis-prevent
                   className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain p-4 pb-[max(1rem,env(safe-area-inset-bottom))] [-webkit-overflow-scrolling:touch] md:p-6"
                 >
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    {open.collections.map((collection) => (
-                      <PortfolioCard
-                        key={collection.id}
-                        collection={collection}
-                        categoryTitle={open.title}
-                        onOpenLightbox={openLightbox}
-                        onRequest={() => {
-                          closeAll();
-                          window.setTimeout(() => scrollTo("contacts"), 80);
-                        }}
-                      />
-                    ))}
-                  </div>
+                  {open.collections.length > 0 ? (
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                      {open.collections.map((collection) => (
+                        <PortfolioCard
+                          key={collection.id}
+                          collection={collection}
+                          categoryTitle={open.title}
+                          onOpenLightbox={openLightbox}
+                          onRequest={() => {
+                            closeAll();
+                            window.setTimeout(() => scrollTo("contacts"), 80);
+                          }}
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex min-h-64 items-center justify-center rounded-2xl border border-brass/20 bg-milk px-6 text-center text-sm text-graphite/60 md:text-base">
+                      Фотографии проектов будут добавлены позже.
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </motion.div>
@@ -505,7 +528,7 @@ export function Projects() {
         </FadeIn>
 
         <FadeIn delay={0.08} className="mt-8 md:mt-10">
-          <div className="grid grid-cols-3 gap-2.5 md:gap-5">
+          <div className="grid grid-cols-2 gap-2.5 md:grid-cols-4 md:gap-5">
             {projectGroups.map((group) => (
               <GroupShowcaseCard
                 key={group.id}
