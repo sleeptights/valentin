@@ -18,7 +18,7 @@ export interface ProjectGroup {
   collections: PortfolioCollection[];
 }
 
-export const PORTFOLIO_VERSION = "13";
+export const PORTFOLIO_VERSION = "14";
 
 export const projectGroups: ProjectGroup[] = [
   {
@@ -54,9 +54,9 @@ export const projectGroups: ProjectGroup[] = [
       {
         "id": "kitchen-10",
         "style": "классика",
-        "layout": "угловая",
+        "layout": "прямая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-10/01.jpg?v=13"
+          "/images/catalog/3852/0.jpg?v=15"
         ]
       },
       {
@@ -64,31 +64,31 @@ export const projectGroups: ProjectGroup[] = [
         "style": "классика",
         "layout": "прямая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-11/01.jpg?v=13"
+          "/images/catalog/4034/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-12",
         "style": "классика",
-        "layout": "П-образная с барной стойкой",
+        "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-12/01.jpg?v=13"
+          "/images/catalog/2120/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-13",
-        "style": "классика",
-        "layout": "угловая",
+        "style": "современный",
+        "layout": "прямая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-13/01.jpg?v=13"
+          "/images/catalog/2118/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-14",
-        "style": "классика",
+        "style": "современный",
         "layout": "прямая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-14/01.jpg?v=13"
+          "/images/catalog/5002/0.jpg?v=15"
         ]
       },
       {
@@ -96,79 +96,111 @@ export const projectGroups: ProjectGroup[] = [
         "style": "современный",
         "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-15/01.jpg?v=13"
+          "/images/catalog/5021/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-16",
-        "style": "современный",
-        "layout": "угловая",
+        "style": "классика",
+        "layout": "прямая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-16/01.jpg?v=13"
+          "/images/catalog/5022/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-17",
-        "style": "классика",
-        "layout": "угловая",
+        "style": "лофт",
+        "layout": "П-образная с барной стойкой",
         "images": [
-          "/images/portfolio/kitchens/kitchen-17/01.jpg?v=13"
+          "/images/catalog/5023/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-18",
-        "style": "классика",
+        "style": "современный",
         "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-18/01.jpg?v=13"
+          "/images/catalog/5024/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-19",
-        "style": "классика",
+        "style": "современный",
         "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-19/01.jpg?v=13"
+          "/images/catalog/5025/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-20",
-        "style": "современный",
+        "style": "классика",
         "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-20/01.jpg?v=13"
+          "/images/catalog/5026/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-21",
-        "style": "современный",
+        "style": "классика",
         "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-21/01.jpg?v=13"
+          "/images/catalog/5027/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-22",
-        "style": "лофт",
-        "layout": "П-образная с барной стойкой",
+        "style": "современный",
+        "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-22/01.jpg?v=13"
+          "/images/catalog/5028/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-23",
-        "style": "классика",
-        "layout": "прямая",
+        "style": "современный",
+        "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-23/01.jpg?v=13"
+          "/images/catalog/5029/0.jpg?v=15"
         ]
       },
       {
         "id": "kitchen-24",
-        "style": "неоклассика",
+        "style": "классика",
+        "layout": "прямая",
+        "images": [
+          "/images/catalog/5030/0.jpg?v=15"
+        ]
+      },
+      {
+        "id": "kitchen-25",
+        "style": "классика",
         "layout": "угловая",
         "images": [
-          "/images/portfolio/kitchens/kitchen-24/01.jpg?v=13"
+          "/images/catalog/5031/0.jpg?v=15"
+        ]
+      },
+      {
+        "id": "kitchen-26",
+        "style": "классика",
+        "layout": "угловая с барной стойкой",
+        "images": [
+          "/images/catalog/5032/0.jpg?v=15"
+        ]
+      },
+      {
+        "id": "kitchen-27",
+        "style": "классика",
+        "layout": "прямая",
+        "images": [
+          "/images/catalog/5033/0.jpg?v=15"
+        ]
+      },
+      {
+        "id": "kitchen-28",
+        "style": "классика",
+        "layout": "угловая",
+        "images": [
+          "/images/catalog/5034/0.jpg?v=15"
         ]
       }
     ]
