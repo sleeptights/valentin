@@ -18,7 +18,7 @@ export interface ProjectGroup {
   collections: PortfolioCollection[];
 }
 
-export const PORTFOLIO_VERSION = "16";
+export const PORTFOLIO_VERSION = "17";
 
 export const projectGroups: ProjectGroup[] = [
   {
@@ -423,7 +423,7 @@ export const projectGroups: ProjectGroup[] = [
     "cover": "/images/portfolio/home/cover.jpg?v=16",
     "showcase": [
       "/images/portfolio/home/cover.jpg?v=16",
-      "/images/catalog/5006/0.jpg?v=15",
+      "/images/catalog/5006/0.webp?v=17",
       "/images/catalog/5007/0.jpg?v=15"
     ],
     "collections": [
@@ -432,9 +432,9 @@ export const projectGroups: ProjectGroup[] = [
         "style": "современный",
         "layout": "модульная детская",
         "images": [
-          "/images/catalog/5004/0.jpg?v=15",
-          "/images/catalog/5004/1.jpg?v=15",
-          "/images/catalog/5004/2.jpg?v=15"
+          "/images/catalog/5004/0.webp?v=17",
+          "/images/catalog/5004/1.webp?v=17",
+          "/images/catalog/5004/2.webp?v=17"
         ]
       },
       {
@@ -442,9 +442,9 @@ export const projectGroups: ProjectGroup[] = [
         "style": "современный",
         "layout": "шкафная система",
         "images": [
-          "/images/catalog/5006/0.jpg?v=15",
-          "/images/catalog/5006/1.jpg?v=15",
-          "/images/catalog/5006/2.jpg?v=15"
+          "/images/catalog/5006/0.webp?v=17",
+          "/images/catalog/5006/1.jpg?v=17",
+          "/images/catalog/5006/2.jpg?v=17"
         ]
       },
       {
@@ -485,6 +485,46 @@ export const projectGroups: ProjectGroup[] = [
           "/images/catalog/5017/0.jpg?v=15",
           "/images/catalog/5017/1.jpg?v=15",
           "/images/catalog/5017/2.jpg?v=15"
+        ]
+      },
+      {
+        "id": "home-07",
+        "style": "современный",
+        "layout": "стеллаж с подсветкой",
+        "images": [
+          "/images/catalog/5035/0.webp?v=17",
+          "/images/catalog/5035/1.webp?v=17",
+          "/images/catalog/5035/2.webp?v=17"
+        ]
+      },
+      {
+        "id": "home-08",
+        "style": "современная классика",
+        "layout": "прикроватная тумба",
+        "images": [
+          "/images/catalog/5036/0.webp?v=17",
+          "/images/catalog/5036/1.webp?v=17",
+          "/images/catalog/5036/2.webp?v=17"
+        ]
+      },
+      {
+        "id": "home-09",
+        "style": "неоклассика",
+        "layout": "распашной шкаф",
+        "images": [
+          "/images/catalog/5037/0.webp?v=17",
+          "/images/catalog/5037/1.webp?v=17",
+          "/images/catalog/5037/2.webp?v=17"
+        ]
+      },
+      {
+        "id": "home-10",
+        "style": "современный",
+        "layout": "модульный шкаф",
+        "images": [
+          "/images/catalog/5038/0.webp?v=17",
+          "/images/catalog/5038/1.webp?v=17",
+          "/images/catalog/5038/2.webp?v=17"
         ]
       }
     ]

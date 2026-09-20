@@ -838,9 +838,9 @@ export const products: Product[] = [
     "inStock": false,
     "category": "мебель для дома",
     "images": [
-      "/images/catalog/5004/0.jpg?v=15",
-      "/images/catalog/5004/1.jpg?v=15",
-      "/images/catalog/5004/2.jpg?v=15"
+      "/images/catalog/5004/0.webp?v=17",
+      "/images/catalog/5004/1.webp?v=17",
+      "/images/catalog/5004/2.webp?v=17"
     ],
     "description": "Детская Nest — мебель для дома салона Valentin от 165 000 ₽.",
     "features": ["По индивидуальным размерам", "Под заказ"]
@@ -868,9 +868,9 @@ export const products: Product[] = [
     "inStock": false,
     "category": "мебель для дома",
     "images": [
-      "/images/catalog/5006/0.jpg?v=15",
-      "/images/catalog/5006/1.jpg?v=15",
-      "/images/catalog/5006/2.jpg?v=15"
+      "/images/catalog/5006/0.webp?v=17",
+      "/images/catalog/5006/1.jpg?v=17",
+      "/images/catalog/5006/2.jpg?v=17"
     ],
     "description": "Гостиная Casa — мебель для дома салона Valentin от 128 000 ₽.",
     "features": ["По индивидуальным размерам", "Под заказ"]
@@ -1294,6 +1294,66 @@ export const products: Product[] = [
     ],
     "description": "Кухня Бельведер — кухни салона Valentin от 272 000 ₽.",
     "features": ["Индивидуальные размеры", "Под заказ"]
+  },
+  {
+    "id": "stellazh-lumi-5035",
+    "name": "Стеллаж Lumi",
+    "priceFrom": 185000,
+    "materials": ["кашемир", "латунь"],
+    "inStock": false,
+    "category": "мебель для дома",
+    "images": [
+      "/images/catalog/5035/0.webp?v=17",
+      "/images/catalog/5035/1.webp?v=17",
+      "/images/catalog/5035/2.webp?v=17"
+    ],
+    "description": "Стеллаж Lumi — мебель с интегрированной подсветкой по индивидуальным размерам.",
+    "features": ["Встроенная подсветка", "Под заказ"]
+  },
+  {
+    "id": "tumba-ring-5036",
+    "name": "Тумба Ring",
+    "priceFrom": 42000,
+    "materials": ["дуб", "латунь"],
+    "inStock": false,
+    "category": "мебель для дома",
+    "images": [
+      "/images/catalog/5036/0.webp?v=17",
+      "/images/catalog/5036/1.webp?v=17",
+      "/images/catalog/5036/2.webp?v=17"
+    ],
+    "description": "Тумба Ring — прикроватная тумба салона Valentin по индивидуальному проекту.",
+    "features": ["Прикроватная тумба", "Под заказ"]
+  },
+  {
+    "id": "shkaf-aurelia-5037",
+    "name": "Шкаф Aurelia",
+    "priceFrom": 178000,
+    "materials": ["кашемир", "латунь"],
+    "inStock": false,
+    "category": "мебель для дома",
+    "images": [
+      "/images/catalog/5037/0.webp?v=17",
+      "/images/catalog/5037/1.webp?v=17",
+      "/images/catalog/5037/2.webp?v=17"
+    ],
+    "description": "Шкаф Aurelia — распашной шкаф с рифлёными фасадами и латунными деталями.",
+    "features": ["Рифлёные фасады", "Под заказ"]
+  },
+  {
+    "id": "shkaf-alba-5038",
+    "name": "Шкаф Alba",
+    "priceFrom": 148000,
+    "materials": ["кашемир"],
+    "inStock": false,
+    "category": "мебель для дома",
+    "images": [
+      "/images/catalog/5038/0.webp?v=17",
+      "/images/catalog/5038/1.webp?v=17",
+      "/images/catalog/5038/2.webp?v=17"
+    ],
+    "description": "Шкаф Alba — модульный распашной шкаф по индивидуальным размерам.",
+    "features": ["По индивидуальным размерам", "Под заказ"]
   }
 ];
 
