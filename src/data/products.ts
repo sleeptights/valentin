@@ -824,8 +824,8 @@ export const products: Product[] = [
     "category": "прихожие",
     "images": [
       "/images/catalog/5003/0.jpg?v=15",
-      "/images/catalog/5003/1.jpg?v=15",
-      "/images/catalog/5003/2.jpg?v=15"
+      "/images/catalog/5003/1.webp?v=18",
+      "/images/catalog/5003/2.webp?v=18"
     ],
     "description": "Шкаф Linea — шкафы салона Valentin от 98 000 ₽.",
     "features": ["Для прихожей", "Под заказ"]

@@ -128,7 +128,7 @@ export function ChatWidget() {
 
       {hint && !open ? (
         <div className="mb-3 hidden max-w-[15rem] rounded-[1.2rem] border border-brass/20 bg-milk px-4 py-3 text-sm text-graphite shadow-[0_16px_40px_rgba(40,24,16,0.12)] sm:block">
-          Напишите нам — подберём кухню или диван
+          Напишите нам — мы поможем вам определиться с выбором
         </div>
       ) : null}
 
